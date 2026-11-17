@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/Button";
 import { useCart } from "@/context/CartContext";
 import { MENU_ITEMS } from "@/lib/menu-data";
@@ -105,7 +106,7 @@ export function Hero() {
 
   const total = carouselDishes.length; // 6 items
 
-  // Moving forward changes to the next image on the right
+  // Moving forward changes to the next image on the right (slides Right -> Left)
   const handlePrev = () => {
     setActiveIndex((prev) => (prev - 1 + total) % total);
   };
@@ -114,27 +115,74 @@ export function Hero() {
     setActiveIndex((prev) => (prev + 1) % total);
   };
 
-  // Auto carousel loop every 4 seconds
+  // Continuous smooth auto-carousel loop moving right to left
   useEffect(() => {
     const timer = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % total);
-    }, 4500);
+    }, 4000);
     return () => clearInterval(timer);
   }, [total]);
 
-  // The 3 currently visible slots in the carousel:
-  // slot 0 (Left): (activeIndex - 1 + total) % total -> -30 degree (tilted towards left)
-  // slot 1 (Middle / Center Active): activeIndex -> 0 degree (upright & centered)
-  // slot 2 (Right): (activeIndex + 1) % total -> 30 degree (tilted towards right)
-  const leftIndex = (activeIndex - 1 + total) % total;
-  const centerIndex = activeIndex;
-  const rightIndex = (activeIndex + 1) % total;
+  // Position calculator relative to activeIndex (handles circular 6 dishes cleanly)
+  const getSlotProps = (index: number) => {
+    // Relative distance: -1 is left, 0 is center, 1 is right, 2 is entering right, etc.
+    let diff = (index - activeIndex + total) % total;
+    if (diff > total / 2) {
+      diff -= total; // normalize into [-2, -1, 0, 1, 2, 3]
+    }
 
-  const visibleSlots = [
-    { dish: carouselDishes[leftIndex], pos: "left", angle: -30, scale: 0.88, opacity: 0.7, zIndex: 10 },
-    { dish: carouselDishes[centerIndex], pos: "center", angle: 0, scale: 1.08, opacity: 1, zIndex: 30 },
-    { dish: carouselDishes[rightIndex], pos: "right", angle: 30, scale: 0.88, opacity: 0.7, zIndex: 10 },
-  ];
+    if (diff === 0) {
+      // Center (Upright, zero degrees, scale 1.1)
+      return {
+        x: 0,
+        rotate: 0,
+        scale: 1.1,
+        opacity: 1,
+        zIndex: 30,
+        pointerEvents: "auto" as const,
+      };
+    } else if (diff === -1) {
+      // Left item (Tilted -30° towards left)
+      return {
+        x: -280,
+        rotate: -30,
+        scale: 0.86,
+        opacity: 0.65,
+        zIndex: 15,
+        pointerEvents: "auto" as const,
+      };
+    } else if (diff === 1) {
+      // Right item (Tilted +30° towards right)
+      return {
+        x: 280,
+        rotate: 30,
+        scale: 0.86,
+        opacity: 0.65,
+        zIndex: 15,
+        pointerEvents: "auto" as const,
+      };
+    } else if (diff > 1) {
+      // Offscreen right (waiting to slide into right slot)
+      return {
+        x: 520,
+        rotate: 45,
+        scale: 0.7,
+        opacity: 0,
+        zIndex: 5,
+        pointerEvents: "none" as const,
+      };
+    } else {
+      // Offscreen left (exited left slot)
+      return {
+        x: -520,
+        rotate: -45,
+        scale: 0.7,
+        opacity: 0,
+        zIndex: 5,
+        pointerEvents: "none" as const,
+      };
+    }
+  };
 
   return (
     <section
@@ -155,18 +203,18 @@ export function Hero() {
         </div>
 
         {/* TOP MAIN HEADING (Requested) */}
-        <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-10 max-w-4xl leading-[1.12]">
+        <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-8 max-w-4xl leading-[1.12]">
           Where Fire Meets <span className="text-[#E6B83F]">Ancestral Flavor.</span>
         </h1>
 
-        {/* 3-SLOT 6-IMAGE CAROUSEL STAGE (Left: 120°, Middle: 90°, Right: 30°) */}
-        <div className="relative w-full max-w-4xl py-6 my-2 flex items-center justify-center">
+        {/* SMOOTH CONTINUOUS 6-DISH CAROUSEL STAGE */}
+        <div className="relative w-full max-w-4xl h-[340px] sm:h-[390px] md:h-[420px] my-2 flex items-center justify-center">
           
           {/* Navigation Arrows */}
           <button
             onClick={handlePrev}
             aria-label="Previous Dish"
-            className="absolute left-2 sm:left-4 z-40 w-11 h-11 rounded-full bg-black/70 hover:bg-[#8F1725] text-white border border-[#E6B83F]/40 flex items-center justify-center transition-all shadow-xl backdrop-blur-md active:scale-95 cursor-pointer"
+            className="absolute left-2 sm:left-4 z-40 w-11 h-11 rounded-full bg-black/75 hover:bg-[#8F1725] text-white border border-[#E6B83F]/40 flex items-center justify-center transition-all shadow-xl backdrop-blur-md active:scale-95 cursor-pointer"
           >
             <ChevronLeft className="w-5 h-5 text-[#E6B83F]" />
           </button>
@@ -174,36 +222,42 @@ export function Hero() {
           <button
             onClick={handleNext}
             aria-label="Next Dish"
-            className="absolute right-2 sm:right-4 z-40 w-11 h-11 rounded-full bg-black/70 hover:bg-[#8F1725] text-white border border-[#E6B83F]/40 flex items-center justify-center transition-all shadow-xl backdrop-blur-md active:scale-95 cursor-pointer"
+            className="absolute right-2 sm:right-4 z-40 w-11 h-11 rounded-full bg-black/75 hover:bg-[#8F1725] text-white border border-[#E6B83F]/40 flex items-center justify-center transition-all shadow-xl backdrop-blur-md active:scale-95 cursor-pointer"
           >
             <ChevronRight className="w-5 h-5 text-[#E6B83F]" />
           </button>
 
-          {/* Carousel Cards Flex Track */}
-          <div className="flex items-center justify-center gap-4 sm:gap-8 md:gap-10 w-full overflow-visible">
-            {visibleSlots.map((slot) => {
-              const { dish, pos, angle, scale, opacity, zIndex } = slot;
-              const isCenter = pos === "center";
+          {/* All 6 Dishes smoothly animated with Framer Motion Layout Tracking */}
+          <div className="relative w-full h-full flex items-center justify-center overflow-visible">
+            {carouselDishes.map((dish, index) => {
+              const slot = getSlotProps(index);
+              const isCenter = slot.zIndex === 30;
 
               return (
-                <div
-                  key={`${dish.id}-${pos}`}
-                  onClick={() => {
-                    if (pos === "left") handlePrev();
-                    if (pos === "right") handleNext();
+                <motion.div
+                  key={dish.id}
+                  animate={{
+                    x: slot.x,
+                    rotate: slot.rotate,
+                    scale: slot.scale,
+                    opacity: slot.opacity,
+                    zIndex: slot.zIndex,
                   }}
-                  style={{
-                    transform: `rotate(${angle}deg) scale(${scale})`,
-                    transition: "all 0.65s cubic-bezier(0.22, 1, 0.36, 1)",
-                    opacity,
-                    zIndex,
+                  transition={{
+                    duration: 0.75,
+                    ease: [0.22, 1, 0.36, 1], // Smooth luxury glide
+                  }}
+                  onClick={() => {
+                    if (slot.x < 0) handlePrev();
+                    if (slot.x > 0) handleNext();
                   }}
                   className={cn(
-                    "relative aspect-square w-48 sm:w-60 md:w-72 rounded-[28px] overflow-hidden cursor-pointer shrink-0 select-none shadow-2xl transition-all",
+                    "absolute aspect-square w-48 sm:w-60 md:w-72 rounded-[28px] overflow-hidden select-none shadow-2xl transition-shadow cursor-pointer",
                     isCenter
                       ? "ring-2 ring-[#E6B83F] shadow-[0_20px_60px_rgba(230,184,63,0.35)]"
                       : "ring-1 ring-white/20 hover:opacity-90"
                   )}
+                  style={{ pointerEvents: slot.pointerEvents }}
                 >
                   <Image
                     src={dish.image}
@@ -266,13 +320,13 @@ export function Hero() {
                       </div>
                     )}
                   </div>
-                </div>
+                </motion.div>
               );
             })}
           </div>
 
           {/* Carousel Indicator Dots for all 6 dishes */}
-          <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2">
+          <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 flex items-center gap-2">
             {carouselDishes.map((_, i) => (
               <button
                 key={i}
@@ -302,7 +356,7 @@ export function Hero() {
           </Button>
           <Button href="/signatures" variant="crimson" size="lg" className="px-7 py-3.5 glass-panel-dark text-white border border-[#E6B83F]/50">
             <Sparkles className="w-4 h-4 mr-2 text-[#E6B83F]" />
-            <span>View Signatures</span>
+            <span>View 5 Signatures</span>
           </Button>
         </div>
 
