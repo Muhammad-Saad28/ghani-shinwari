@@ -115,11 +115,11 @@ export function Hero() {
     setActiveIndex((prev) => (prev + 1) % total);
   };
 
-  // Continuous smooth auto-carousel loop moving right to left
+  // Smooth auto-carousel glide moving right to left
   useEffect(() => {
     const timer = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % total);
-    }, 4000);
+    }, 5000);
     return () => clearInterval(timer);
   }, [total]);
 
@@ -136,7 +136,7 @@ export function Hero() {
       return {
         x: 0,
         rotate: 0,
-        scale: 1.1,
+        scale: 1.12,
         opacity: 1,
         zIndex: 30,
         pointerEvents: "auto" as const,
@@ -144,39 +144,39 @@ export function Hero() {
     } else if (diff === -1) {
       // Left item (Tilted -30° towards left)
       return {
-        x: -280,
+        x: -290,
         rotate: -30,
-        scale: 0.86,
-        opacity: 0.65,
+        scale: 0.88,
+        opacity: 0.72,
         zIndex: 15,
         pointerEvents: "auto" as const,
       };
     } else if (diff === 1) {
       // Right item (Tilted +30° towards right)
       return {
-        x: 280,
+        x: 290,
         rotate: 30,
-        scale: 0.86,
-        opacity: 0.65,
+        scale: 0.88,
+        opacity: 0.72,
         zIndex: 15,
         pointerEvents: "auto" as const,
       };
     } else if (diff > 1) {
-      // Offscreen right (waiting to slide into right slot)
+      // Offscreen right (waiting to smoothly glide into right slot)
       return {
-        x: 520,
-        rotate: 45,
-        scale: 0.7,
+        x: 580,
+        rotate: 35,
+        scale: 0.75,
         opacity: 0,
         zIndex: 5,
         pointerEvents: "none" as const,
       };
     } else {
-      // Offscreen left (exited left slot)
+      // Offscreen left (smoothly glide off left slot)
       return {
-        x: -520,
-        rotate: -45,
-        scale: 0.7,
+        x: -580,
+        rotate: -35,
+        scale: 0.75,
         opacity: 0,
         zIndex: 5,
         pointerEvents: "none" as const,
@@ -244,8 +244,10 @@ export function Hero() {
                     zIndex: slot.zIndex,
                   }}
                   transition={{
-                    duration: 0.75,
-                    ease: [0.22, 1, 0.36, 1], // Smooth luxury glide
+                    type: "spring",
+                    stiffness: 70,
+                    damping: 20,
+                    mass: 0.8,
                   }}
                   onClick={() => {
                     if (slot.x < 0) handlePrev();
