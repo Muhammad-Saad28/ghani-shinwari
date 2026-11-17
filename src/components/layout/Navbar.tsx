@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 import { RESTAURANT_CONFIG } from "@/lib/config";
 import { Button } from "@/components/ui/Button";
 import { InstagramIcon } from "@/components/ui/InstagramIcon";
-import { Menu, X, ArrowUpRight, ShoppingBag, User } from "lucide-react";
+import { Menu, X, ArrowUpRight, ShoppingBag, User, Flame, Clock } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useCart } from "@/context/CartContext";
 
@@ -20,7 +20,7 @@ export function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 40);
+      setIsScrolled(window.scrollY > 30);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -31,27 +31,27 @@ export function Navbar() {
     setMobileMenuOpen(false);
   }, [pathname]);
 
-  // If not homepage, always show solid warm background for contrast
-  const showSolidBackground = isScrolled || !isHomePage;
-
   return (
     <>
-      <header
-        className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-          showSolidBackground
-            ? "bg-[#F7F2E8]/95 backdrop-blur-md border-b border-[#DED2BE] py-3.5 shadow-sm"
-            : "bg-transparent py-5"
-        )}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* FLOATING LUXURY CAPSULE NAVBAR */}
+      <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-500 pt-3 sm:pt-4 px-3 sm:px-6 pointer-events-none">
+        <div
+          className={cn(
+            "max-w-7xl mx-auto rounded-full transition-all duration-500 pointer-events-auto",
+            isScrolled
+              ? "bg-[#15130F]/90 backdrop-blur-2xl border border-[#E6B83F]/35 shadow-[0_12px_36px_rgba(0,0,0,0.5)] py-2 sm:py-2.5 px-4 sm:px-6"
+              : isHomePage
+              ? "bg-[#15130F]/55 backdrop-blur-xl border border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.3)] py-2.5 sm:py-3.5 px-4 sm:px-7"
+              : "bg-[#70111C]/90 backdrop-blur-2xl border border-[#E6B83F]/30 shadow-[0_12px_36px_rgba(0,0,0,0.4)] py-2.5 sm:py-3 px-4 sm:px-6"
+          )}
+        >
           <div className="flex items-center justify-between">
-            {/* Brand Logo */}
+            {/* Brand Logo with Glowing Seal */}
             <Link
               href="/"
-              className="flex items-center gap-3 group transition-opacity"
+              className="flex items-center gap-3 group transition-transform active:scale-95"
             >
-              <div className="relative w-11 h-11 sm:w-12 sm:h-12 rounded-full overflow-hidden border-2 border-[#E6B83F] shadow-sm shrink-0 bg-[#8F1725]">
+              <div className="relative w-10 h-10 sm:w-11 sm:h-11 rounded-full overflow-hidden border-2 border-[#E6B83F] shadow-[0_0_15px_rgba(230,184,63,0.35)] shrink-0 bg-[#8F1725] group-hover:scale-105 transition-transform duration-300">
                 <Image
                   src="/logo.jpg"
                   alt="Ghani Shinwari Logo"
@@ -62,27 +62,18 @@ export function Navbar() {
                 />
               </div>
               <div className="flex flex-col items-start">
-                <span
-                  className={cn(
-                    "font-serif text-xl sm:text-2xl font-normal tracking-tight leading-none transition-colors",
-                    showSolidBackground ? "text-[#8F1725]" : "text-[#F7F2E8]"
-                  )}
-                >
-                  GHANI <span className="font-semibold text-[#E6B83F]">SHINWARI</span>
+                <span className="font-serif text-lg sm:text-xl font-bold tracking-tight leading-none text-white flex items-center gap-1.5">
+                  GHANI <span className="text-[#E6B83F]">SHINWARI</span>
                 </span>
-                <span
-                  className={cn(
-                    "text-[8px] sm:text-[9px] tracking-[0.25em] uppercase font-medium mt-1 transition-colors",
-                    showSolidBackground ? "text-[#5C554F]" : "text-[#F7F2E8]/80"
-                  )}
-                >
-                  Traditional Cuisine
+                <span className="text-[8px] sm:text-[9px] tracking-[0.25em] uppercase font-semibold text-[#E6B83F]/80 mt-1 flex items-center gap-1">
+                  <Flame className="w-2.5 h-2.5 text-[#E6B83F] animate-pulse" />
+                  <span>Khyber Tribal Cuisine</span>
                 </span>
               </div>
             </Link>
 
-            {/* Desktop Navigation Links */}
-            <nav className="hidden lg:flex items-center gap-7">
+            {/* Desktop Navigation Capsule Links */}
+            <nav className="hidden lg:flex items-center gap-1 bg-black/30 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10">
               {RESTAURANT_CONFIG.navLinks.map((link) => {
                 const isActive = pathname === link.href;
                 return (
@@ -90,56 +81,39 @@ export function Navbar() {
                     key={link.href}
                     href={link.href}
                     className={cn(
-                      "text-xs uppercase tracking-[0.2em] font-medium transition-colors hover:text-[#E6B83F] relative py-1",
-                      showSolidBackground
-                        ? isActive
-                          ? "text-[#8F1725] font-bold"
-                          : "text-[#292522]"
-                        : isActive
-                        ? "text-[#E6B83F] font-bold"
-                        : "text-[#F7F2E8]/90"
+                      "text-xs uppercase tracking-[0.15em] font-semibold transition-all px-3.5 py-1.5 rounded-full relative",
+                      isActive
+                        ? "bg-[#E6B83F] text-[#15130F] shadow-[0_2px_12px_rgba(230,184,63,0.4)] font-bold"
+                        : "text-[#F7F2E8]/85 hover:text-white hover:bg-white/10"
                     )}
                   >
                     {link.label}
-                    {isActive && (
-                      <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#E6B83F]" />
-                    )}
                   </Link>
                 );
               })}
             </nav>
 
             {/* Desktop Actions: Instagram, Cart, Account, Explore Menu */}
-            <div className="hidden lg:flex items-center gap-3">
+            <div className="hidden lg:flex items-center gap-2 sm:gap-2.5">
               <a
                 href={RESTAURANT_CONFIG.social.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram @ghani_shinwari"
-                className={cn(
-                  "p-2 rounded transition-colors",
-                  showSolidBackground
-                    ? "text-[#8F1725] hover:text-[#E6B83F]"
-                    : "text-[#F7F2E8] hover:text-[#E6B83F]"
-                )}
+                className="w-9 h-9 rounded-full bg-white/5 hover:bg-white/15 border border-white/10 text-white hover:text-[#E6B83F] flex items-center justify-center transition-all"
               >
-                <InstagramIcon className="w-5 h-5" />
+                <InstagramIcon className="w-4 h-4" />
               </a>
 
-              {/* Cart Icon Link */}
+              {/* Cart Icon Capsule */}
               <Link
                 href="/cart"
                 aria-label="Shopping Cart"
-                className={cn(
-                  "p-2 rounded transition-colors relative cursor-pointer",
-                  showSolidBackground
-                    ? "text-[#8F1725] hover:text-[#E6B83F]"
-                    : "text-[#F7F2E8] hover:text-[#E6B83F]"
-                )}
+                className="relative w-9 h-9 rounded-full bg-white/5 hover:bg-white/15 border border-white/10 text-white hover:text-[#E6B83F] flex items-center justify-center transition-all cursor-pointer"
               >
-                <ShoppingBag className="w-5 h-5" />
+                <ShoppingBag className="w-4 h-4" />
                 {totalCount > 0 ? (
-                  <span className="absolute -top-1 -right-1 min-w-[18px] h-[18px] px-1 rounded-full bg-[#E6B83F] text-[#292522] text-[10px] font-bold flex items-center justify-center shadow-sm">
+                  <span className="absolute -top-1 -right-1 min-w-[18px] h-[18px] px-1 rounded-full bg-[#E6B83F] text-[#15130F] text-[10px] font-extrabold flex items-center justify-center shadow-md animate-bounce">
                     {totalCount}
                   </span>
                 ) : (
@@ -147,82 +121,68 @@ export function Navbar() {
                 )}
               </Link>
 
-              {/* Account Icon Link */}
+              {/* Account Icon Capsule */}
               <Link
                 href="/account"
                 aria-label="User Account"
-                className={cn(
-                  "p-2 rounded transition-colors cursor-pointer",
-                  showSolidBackground
-                    ? "text-[#8F1725] hover:text-[#E6B83F]"
-                    : "text-[#F7F2E8] hover:text-[#E6B83F]"
-                )}
+                className="w-9 h-9 rounded-full bg-white/5 hover:bg-white/15 border border-white/10 text-white hover:text-[#E6B83F] flex items-center justify-center transition-all cursor-pointer"
               >
-                <User className="w-5 h-5" />
+                <User className="w-4 h-4" />
               </Link>
 
+              {/* Order Now Menu CTA Button */}
               <Button
                 href="/menu"
-                variant={showSolidBackground ? "crimson" : "gold"}
+                variant="gold"
                 size="sm"
-                className="ml-2"
+                className="ml-1 text-xs px-4 py-2 font-bold shadow-lg"
               >
                 Explore Menu
               </Button>
             </div>
 
             {/* Mobile Actions */}
-            <div className="flex lg:hidden items-center gap-2">
+            <div className="flex lg:hidden items-center gap-1.5 sm:gap-2">
               <Link
                 href="/cart"
                 aria-label="Shopping Cart"
-                className={cn(
-                  "p-1.5 transition-colors relative",
-                  showSolidBackground ? "text-[#8F1725]" : "text-[#F7F2E8]"
-                )}
+                className="relative w-8 h-8 rounded-full bg-white/10 text-white flex items-center justify-center"
               >
-                <ShoppingBag className="w-5 h-5" />
-                {totalCount > 0 ? (
-                  <span className="absolute -top-1 -right-1 min-w-[16px] h-[16px] px-1 rounded-full bg-[#E6B83F] text-[#292522] text-[9px] font-bold flex items-center justify-center">
+                <ShoppingBag className="w-4 h-4 text-[#E6B83F]" />
+                {totalCount > 0 && (
+                  <span className="absolute -top-1 -right-1 min-w-[16px] h-[16px] px-1 rounded-full bg-[#E6B83F] text-[#15130F] text-[9px] font-bold flex items-center justify-center">
                     {totalCount}
                   </span>
-                ) : (
-                  <span className="absolute top-0.5 right-0.5 w-1.5 h-1.5 rounded-full bg-[#E6B83F]" />
                 )}
               </Link>
 
               <Link
                 href="/account"
                 aria-label="User Account"
-                className={cn(
-                  "p-1.5 transition-colors",
-                  showSolidBackground ? "text-[#8F1725]" : "text-[#F7F2E8]"
-                )}
+                className="w-8 h-8 rounded-full bg-white/10 text-white flex items-center justify-center"
               >
-                <User className="w-5 h-5" />
+                <User className="w-4 h-4" />
               </Link>
 
               <Button
                 href="/menu"
-                variant={showSolidBackground ? "crimson" : "gold"}
+                variant="gold"
                 size="sm"
-                className="text-[11px] px-3 py-1.5"
+                className="text-[10px] px-2.5 py-1.5 font-bold"
               >
                 Menu
               </Button>
+
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className={cn(
-                  "p-1.5 transition-colors",
-                  showSolidBackground ? "text-[#292522]" : "text-[#F7F2E8]"
-                )}
+                className="w-8 h-8 rounded-full bg-white/10 text-white flex items-center justify-center ml-0.5"
                 aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
               >
                 {mobileMenuOpen ? (
-                  <X className="w-6 h-6" />
+                  <X className="w-4 h-4 text-[#E6B83F]" />
                 ) : (
-                  <Menu className="w-6 h-6" />
+                  <Menu className="w-4 h-4 text-white" />
                 )}
               </button>
             </div>
@@ -233,15 +193,15 @@ export function Navbar() {
       {/* Mobile Drawer */}
       <div
         className={cn(
-          "fixed inset-0 z-40 bg-[#8F1725] text-[#F7F2E8] lg:hidden transition-all duration-300 flex flex-col justify-between pt-24 pb-8 px-6",
+          "fixed inset-0 z-40 bg-[#15130F]/95 backdrop-blur-3xl text-[#F7F2E8] lg:hidden transition-all duration-300 flex flex-col justify-between pt-28 pb-8 px-6",
           mobileMenuOpen
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
         )}
       >
-        <div className="flex flex-col gap-6 mt-4">
-          <span className="text-xs uppercase tracking-[0.25em] text-[#E6B83F] font-semibold border-b border-[#F7F2E8]/20 pb-2">
-            Navigation
+        <div className="flex flex-col gap-5 mt-4">
+          <span className="text-xs uppercase tracking-[0.25em] text-[#E6B83F] font-bold border-b border-white/10 pb-2">
+            Explore Ghani Shinwari
           </span>
           {RESTAURANT_CONFIG.navLinks.map((link) => {
             const isActive = pathname === link.href;
@@ -249,40 +209,34 @@ export function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                onClick={() => setMobileMenuOpen(false)}
                 className={cn(
-                  "font-serif text-2xl tracking-wide transition-colors",
-                  isActive ? "text-[#E6B83F] font-semibold" : "hover:text-[#E6B83F]"
+                  "text-lg font-serif tracking-wide transition-colors py-1 flex items-center justify-between",
+                  isActive
+                    ? "text-[#E6B83F] font-bold"
+                    : "text-[#F7F2E8] hover:text-[#E6B83F]"
                 )}
               >
-                {link.label}
+                <span>{link.label}</span>
+                <span className="text-[#E6B83F] text-xs">→</span>
               </Link>
             );
           })}
         </div>
 
-        <div className="border-t border-[#F7F2E8]/20 pt-6 flex flex-col gap-3">
-          <a
-            href={RESTAURANT_CONFIG.social.instagram}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-between text-sm py-2 px-3 bg-[#70111C] rounded border border-[#E6B83F]/30"
-          >
-            <div className="flex items-center gap-2">
-              <InstagramIcon className="w-4 h-4 text-[#E6B83F]" />
-              <span>Follow @ghani_shinwari</span>
-            </div>
-            <ArrowUpRight className="w-4 h-4 text-[#E6B83F]" />
-          </a>
-          <Button
-            href="/menu"
-            variant="gold"
-            size="md"
-            onClick={() => setMobileMenuOpen(false)}
-            className="w-full"
-          >
-            Explore Complete Menu
+        <div className="space-y-4 pt-6 border-t border-white/10">
+          <Button href="/menu" variant="gold" size="lg" className="w-full justify-center">
+            View Complete 36+ Menu
           </Button>
+
+          <div className="flex items-center justify-between text-xs text-[#F7F2E8]/70 pt-2">
+            <span>Daily Open: 12 PM – 3 AM</span>
+            <a
+              href="tel:+923054449151"
+              className="text-[#E6B83F] font-semibold hover:underline"
+            >
+              +92 305 4449151
+            </a>
+          </div>
         </div>
       </div>
     </>
