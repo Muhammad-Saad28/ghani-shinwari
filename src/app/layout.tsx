@@ -6,6 +6,7 @@ import { Footer } from "@/components/layout/Footer";
 import { RESTAURANT_CONFIG } from "@/lib/config";
 import { CartProvider } from "@/context/CartContext";
 import { BottomRightCartToast } from "@/components/ui/BottomRightCartToast";
+import { ScrollToTopOnReload } from "@/components/ui/ScrollToTopOnReload";
 
 const fontSans = Plus_Jakarta_Sans({
   variable: "--font-sans",
@@ -117,6 +118,7 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen flex flex-col bg-[#F7F2E8] text-[#292522] font-sans selection:bg-[#8F1725] selection:text-[#F7F2E8]">
+        <ScrollToTopOnReload />
         <CartProvider>
           <Navbar />
           <main className="flex-1">{children}</main>
