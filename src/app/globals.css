@@ -2,21 +2,15 @@
 
 @layer base {
   :root {
-    /* Brand Exact Color Distribution:
-       - Warm Alabaster: 60% (Main backgrounds, content sections, spacious layouts)
-       - Deep Crimson Red: 30% (Hero backgrounds, important sections, navigation accents, buttons)
-       - Golden Yellow: 10% (Highlights, decorative details, icons, separators, badges)
-       - Body text: Charcoal Coal (#292522)
-       - Subtle borders: Sand Beige (#DED2BE)
-    */
     --color-crimson: #8F1725;
-    --color-crimson-dark: #70111C;
+    --color-crimson-dark: #660E18;
+    --color-crimson-deep: #47080F;
     --color-crimson-light: #A52030;
     --color-alabaster: #F7F2E8;
     --color-alabaster-card: #FAF6EF;
     --color-alabaster-dark: #EFE7D8;
     --color-gold: #E6B83F;
-    --color-gold-hover: #F0C655;
+    --color-gold-hover: #F3C44E;
     --color-charcoal: #292522;
     --color-charcoal-muted: #5C554F;
     --color-sand: #DED2BE;
@@ -40,32 +34,132 @@
   font-family: var(--font-serif), Georgia, Cambria, serif;
 }
 
-/* Subtle decorative patterns & utilities */
-.border-sand {
-  border-color: #DED2BE;
+/* Glassmorphism Classes */
+.glass-panel-dark {
+  background: rgba(112, 17, 28, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(230, 184, 63, 0.25);
 }
 
-.gold-glow {
-  text-shadow: 0 0 20px rgba(230, 184, 63, 0.4);
+.glass-panel-dark-subtle {
+  background: rgba(71, 8, 15, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(247, 242, 232, 0.12);
 }
 
-.crimson-gradient {
-  background: linear-gradient(135deg, #8F1725 0%, #6E101B 100%);
+.glass-panel-light {
+  background: rgba(250, 246, 239, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(222, 210, 190, 0.6);
 }
 
-.gold-border-decor {
+.glass-pill {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(230, 184, 63, 0.35);
+}
+
+/* Atmospheric Glows & Shadows */
+.glow-gold-sm {
+  box-shadow: 0 0 15px rgba(230, 184, 63, 0.25);
+}
+
+.glow-gold-lg {
+  box-shadow: 0 0 35px rgba(230, 184, 63, 0.35), 0 0 15px rgba(143, 23, 37, 0.4);
+}
+
+.glow-crimson {
+  box-shadow: 0 12px 30px rgba(112, 17, 28, 0.35);
+}
+
+.gold-glow-text {
+  text-shadow: 0 0 20px rgba(230, 184, 63, 0.45);
+}
+
+/* Card Hover Elevation Effects */
+.card-hover-lift {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+}
+
+.card-hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 35px -10px rgba(112, 17, 28, 0.15), 0 0 1px 1px rgba(143, 23, 37, 0.2);
+}
+
+/* Image Zoom Wrapper */
+.img-zoom-wrapper {
+  overflow: hidden;
+}
+
+.img-zoom-wrapper img {
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.img-zoom-wrapper:hover img {
+  transform: scale(1.08);
+}
+
+/* Floating animation */
+@keyframes softFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-soft-float {
+  animation: softFloat 4.5s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 6s ease-in-out infinite;
+}
+
+/* Shimmer effect on buttons */
+@keyframes shimmerSweep {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.shimmer-btn {
   position: relative;
+  overflow: hidden;
 }
 
-.gold-border-decor::after {
+.shimmer-btn::after {
   content: '';
   position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 48px;
-  height: 2px;
-  background-color: #E6B83F;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transform: translateX(-100%);
+}
+
+.shimmer-btn:hover::after {
+  animation: shimmerSweep 1s ease-in-out;
 }
 
 html {
@@ -75,5 +169,10 @@ html {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+  .animate-soft-float,
+  .animate-pulse-glow,
+  .shimmer-btn:hover::after {
+    animation: none;
   }
 }

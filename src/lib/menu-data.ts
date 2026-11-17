@@ -22,7 +22,7 @@ export const MENU_ITEMS: MenuItem[] = [
     priceFull: 3800,
     unitLabel: "Half (0.5 Kg) / Full (1 Kg)",
     isSignature: true,
-    image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=800&q=80",
+    image: "/images/dishes/m-shinwari-karahi.webp",
   },
   {
     id: "m-sulemani-karahi",
@@ -33,7 +33,7 @@ export const MENU_ITEMS: MenuItem[] = [
     priceFull: 3800,
     unitLabel: "Half (0.5 Kg) / Full (1 Kg)",
     isSignature: true,
-    image: "https://images.unsplash.com/photo-1545247181-516773cae7be?auto=format&fit=crop&w=800&q=80",
+    image: "/images/dishes/m-sulemani-karahi.webp",
   },
   {
     id: "m-namkeen-tikka",
@@ -44,7 +44,7 @@ export const MENU_ITEMS: MenuItem[] = [
     priceFull: 3800,
     unitLabel: "Half (0.5 Kg) / Full (1 Kg)",
     isSignature: true,
-    image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80",
+    image: "/images/dishes/m-namkeen-tikka.webp",
   },
   {
     id: "m-qeema-bone",
@@ -54,7 +54,7 @@ export const MENU_ITEMS: MenuItem[] = [
     priceHalf: 2000,
     priceFull: 3800,
     unitLabel: "Half (0.5 Kg) / Full (1 Kg)",
-    image: "https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=800&q=80",
+    image: "/images/dishes/m-qeema-bone.webp",
   },
   {
     id: "m-kabli-pulao",
@@ -65,7 +65,7 @@ export const MENU_ITEMS: MenuItem[] = [
     priceFull: 1600,
     unitLabel: "Half / Full Platter",
     isSignature: true,
-    image: "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=800&q=80",
+    image: "/images/dishes/m-kabli-pulao.webp",
   },
   {
     id: "m-rosh-masala-yakhni",
@@ -76,7 +76,7 @@ export const MENU_ITEMS: MenuItem[] = [
     priceFull: 4000,
     unitLabel: "Half / Full Joint",
     isSignature: true,
-    image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80",
+    image: "/images/dishes/m-rosh-masala-yakhni.webp",
   },
   {
     id: "m-machli-rosh",
@@ -85,7 +85,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Prized tender fish cut (machli cut / shank) prepared in authentic Rosh yakhni broth, meltingly soft and nourishing.",
     priceFull: 4200,
     unitLabel: "Full (1 Kg)",
-    image: "https://images.unsplash.com/photo-1574484284002-952d92456975?auto=format&fit=crop&w=800&q=80",
+    image: "/images/dishes/m-machli-rosh.webp",
   },
   {
     id: "m-machli-karahi",
@@ -94,7 +94,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Prime mutton shank cuts (machli pieces) seared in iron karahi with ripe vine tomatoes, fresh garlic, and split green chilies.",
     priceFull: 4200,
     unitLabel: "Full (1 Kg)",
-    image: "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=800&q=80",
+    image: "/images/dishes/m-machli-karahi.webp",
   },
 
   // 2. LAMB (دنبه)
@@ -107,7 +107,7 @@ export const MENU_ITEMS: MenuItem[] = [
     priceFull: 3700,
     unitLabel: "Half (0.5 Kg) / Full (1 Kg)",
     isSignature: true,
-    image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=800&q=80",
+    image: "/images/dishes/l-shinwari-karahi.webp",
   },
   {
     id: "l-sulemani-karahi",
@@ -118,7 +118,7 @@ export const MENU_ITEMS: MenuItem[] = [
     priceFull: 3700,
     unitLabel: "Half (0.5 Kg) / Full (1 Kg)",
     isSignature: true,
-    image: "https://images.unsplash.com/photo-1545247181-516773cae7be?auto=format&fit=crop&w=800&q=80",
+    image: "/images/dishes/l-sulemani-karahi.webp",
   },
   {
     id: "l-namkeen-tikka",
@@ -129,7 +129,7 @@ export const MENU_ITEMS: MenuItem[] = [
     priceFull: 3700,
     unitLabel: "Half (0.5 Kg) / Full (1 Kg)",
     isSignature: true,
-    image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80",
+    image: "/images/dishes/l-namkeen-tikka.webp",
   },
   {
     id: "l-qeema-bone",
@@ -139,7 +139,7 @@ export const MENU_ITEMS: MenuItem[] = [
     priceHalf: 1900,
     priceFull: 3700,
     unitLabel: "Half (0.5 Kg) / Full (1 Kg)",
-    image: "https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=800&q=80",
+    image: "/images/dishes/l-qeema-bone.webp",
   },
   {
     id: "l-rosh-masala-yakhni",
@@ -150,7 +150,7 @@ export const MENU_ITEMS: MenuItem[] = [
     priceFull: 4000,
     unitLabel: "Half / Full Joint",
     isSignature: true,
-    image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80",
+    image: "/images/dishes/l-rosh-masala-yakhni.webp",
   },
   {
     id: "l-machli-rosh",
@@ -159,7 +159,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "The royal dumba lamb shank cooked gently in its natural sealed jus. Superbly tender and richly satisfying.",
     priceFull: 4200,
     unitLabel: "Full (1 Kg)",
-    image: "https://images.unsplash.com/photo-1574484284002-952d92456975?auto=format&fit=crop&w=800&q=80",
+    image: "/images/dishes/l-machli-rosh.webp",
   },
 
   // 3. BAR.B.Q
@@ -170,7 +170,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Whole plump chicken char-grilled over hardwood coals with a fragrant blend of crushed coriander and roasted spices.",
     price: 1990,
     unitLabel: "Full Bird",
-    image: "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&w=800&q=80",
+    image: "/images/dishes/bbq-chicken-full.webp",
   },
   {
     id: "bbq-chicken-kabab",
@@ -179,7 +179,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Minced chicken seasoned with fresh herbs, green onions, and char-grilled on long flat skewers.",
     price: 1290,
     unitLabel: "5 Pcs",
-    image: "https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?auto=format&fit=crop&w=800&q=80",
+    image: "/images/dishes/bbq-chicken-kabab.webp",
   },
   {
     id: "bbq-chicken-botti",
@@ -188,7 +188,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Boneless chicken cubes marinated in smoky tandoori marinade and roasted to golden perfection.",
     price: 1290,
     unitLabel: "10 Pcs",
-    image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80",
+    image: "/images/dishes/bbq-chicken-botti.webp",
   },
   {
     id: "bbq-malai-botti",
@@ -197,7 +197,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Silky boneless chicken steeped in thick fresh cream, green cardamom, and mild spices with a melt-in-the-mouth texture.",
     price: 1390,
     unitLabel: "10 Pcs",
-    image: "https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?auto=format&fit=crop&w=800&q=80",
+    image: "/images/dishes/bbq-malai-botti.webp",
   },
   {
     id: "bbq-reshmi-kabab",
@@ -206,7 +206,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Velvety spiced chicken mince skewers with egg glaze and subtle herbs, seared over open coals.",
     price: 1390,
     unitLabel: "4 Pcs",
-    image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80",
+    image: "/images/dishes/bbq-reshmi-kabab.webp",
   },
   {
     id: "bbq-cheese-kabab",
@@ -215,7 +215,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Juicy chicken seekh kababs stuffed with rich melted dairy cheese that oozes on first bite.",
     price: 1390,
     unitLabel: "4 Pcs",
-    image: "https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?auto=format&fit=crop&w=800&q=80",
+    image: "/images/dishes/bbq-cheese-kabab.webp",
   },
   {
     id: "bbq-kastori-botti",
@@ -224,7 +224,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Fragrant chicken boti enveloped in a roasted fenugreek (kasuri methi) and saffron yogurt marinade.",
     price: 1390,
     unitLabel: "10 Pcs",
-    image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80",
+    image: "/images/dishes/bbq-kastori-botti.webp",
   },
   {
     id: "bbq-shesh-tauk",
@@ -233,7 +233,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Mediterranean-influenced smoky skewers of chicken cubes marinated in garlic paste, lemon, and olive oil notes.",
     price: 1490,
     unitLabel: "Full Plate",
-    image: "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&w=800&q=80",
+    image: "/images/dishes/bbq-shesh-tauk.webp",
   },
   {
     id: "bbq-hara-bhara-kabab",
@@ -242,7 +242,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Vibrant seekh kababs blended with fresh mint, coriander leaves, green chili, and roasted gram flour.",
     price: 1390,
     unitLabel: "4 Pcs",
-    image: "https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?auto=format&fit=crop&w=800&q=80",
+    image: "/images/dishes/bbq-hara-bhara-kabab.webp",
   },
   {
     id: "bbq-chicken-piece",
@@ -251,7 +251,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Classic marinated chicken quarter (chest or leg) char-roasted with crisp skin and deeply spiced flesh.",
     price: 690,
     unitLabel: "1 Piece",
-    image: "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&w=800&q=80",
+    image: "/images/dishes/bbq-chicken-piece.webp",
   },
   {
     id: "bbq-peshawari-sajji",
@@ -261,7 +261,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 2490,
     unitLabel: "Full Bird",
     isSignature: true,
-    image: "https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?auto=format&fit=crop&w=800&q=80",
+    image: "/images/dishes/bbq-peshawari-sajji.webp",
   },
 
   // 4. CHICKEN
@@ -273,7 +273,7 @@ export const MENU_ITEMS: MenuItem[] = [
     priceHalf: 1200,
     priceFull: 2200,
     unitLabel: "Half / Full Karahi",
-    image: "https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=800&q=80",
+    image: "/images/dishes/c-shinwari-karahi.webp",
   },
   {
     id: "c-sulemani-karahi",
@@ -283,7 +283,7 @@ export const MENU_ITEMS: MenuItem[] = [
     priceHalf: 1200,
     priceFull: 2200,
     unitLabel: "Half / Full Karahi",
-    image: "https://images.unsplash.com/photo-1545247181-516773cae7be?auto=format&fit=crop&w=800&q=80",
+    image: "/images/dishes/c-sulemani-karahi.webp",
   },
 
   // 5. BEEF
@@ -296,7 +296,7 @@ export const MENU_ITEMS: MenuItem[] = [
     priceFull: 1800,
     unitLabel: "1 Pc / 2 Pcs",
     isSignature: true,
-    image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80",
+    image: "/images/dishes/b-chapli-kabab.webp",
   },
   {
     id: "b-kabli-pulao",
@@ -306,7 +306,7 @@ export const MENU_ITEMS: MenuItem[] = [
     priceHalf: 690,
     priceFull: 1090,
     unitLabel: "Half / Full Platter",
-    image: "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=800&q=80",
+    image: "/images/dishes/b-kabli-pulao.webp",
   },
 
   // 6. TANDOORI
@@ -317,7 +317,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Clay-oven baked fluffy tandoori naan brushed with butter and topped with fragrant nigella seeds (kalonji).",
     price: 190,
     unitLabel: "Per Piece",
-    image: "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=800&q=80",
+    image: "/images/dishes/t-kalwanji-naan.webp",
   },
   {
     id: "t-kandhari-naan",
@@ -326,7 +326,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Extra-large crusty Kandahari khameeri flatbread baked on red-hot clay tandoor walls with traditional finger dimples.",
     price: 190,
     unitLabel: "Per Piece",
-    image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80",
+    image: "/images/dishes/t-kandhari-naan.webp",
   },
 
   // 7. DRINKS
@@ -338,7 +338,7 @@ export const MENU_ITEMS: MenuItem[] = [
     priceSmall: 90,
     priceLarge: 190,
     unitLabel: "Small / Large (1.5L)",
-    image: "https://images.unsplash.com/photo-1548839140-29a749e1bc4e?auto=format&fit=crop&w=800&q=80",
+    image: "/images/dishes/d-mineral-water.webp",
   },
   {
     id: "d-can",
@@ -347,7 +347,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Choice of chilled soft drinks and carbonated beverages.",
     price: 190,
     unitLabel: "330ml Can",
-    image: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=800&q=80",
+    image: "/images/dishes/d-can.webp",
   },
   {
     id: "d-fresh-lime",
@@ -356,7 +356,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Refreshing freshly squeezed lime juice with soda water and rock salt.",
     price: 180,
     unitLabel: "Per Glass",
-    image: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=800&q=80",
+    image: "/images/dishes/d-fresh-lime.webp",
   },
   {
     id: "d-mint-margarita",
@@ -365,7 +365,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Blended fresh mint leaves, lemon juice, crushed ice, and sparkling beverage.",
     price: 250,
     unitLabel: "Per Glass",
-    image: "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80",
+    image: "/images/dishes/d-mint-margarita.webp",
   },
   {
     id: "d-peshawari-qahwa",
@@ -375,7 +375,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 90,
     unitLabel: "Per Cup",
     isSignature: true,
-    image: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=80",
+    image: "/images/dishes/d-peshawari-qahwa.webp",
   },
   {
     id: "d-tandoori-chai",
@@ -384,7 +384,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Creamy strong Karak chai poured into blazing hot clay cups (kullad) straight from the tandoor embers.",
     price: 200,
     unitLabel: "Clay Cup",
-    image: "https://images.unsplash.com/photo-1561336313-0bd5e0b27ec8?auto=format&fit=crop&w=800&q=80",
+    image: "/images/dishes/d-tandoori-chai.webp",
   },
   {
     id: "d-doodh-patti",
@@ -393,7 +393,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Pure rich whole-milk boiled slowly with black tea leaves and cracked green cardamom.",
     price: 250,
     unitLabel: "Per Cup",
-    image: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=80",
+    image: "/images/dishes/d-doodh-patti.webp",
   },
 
   // 8. RAITA & SALAD
@@ -405,7 +405,7 @@ export const MENU_ITEMS: MenuItem[] = [
     priceHalf: 300,
     priceFull: 600,
     unitLabel: "Half / Full Bowl",
-    image: "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80",
+    image: "/images/dishes/rs-russian-salad.webp",
   },
   {
     id: "rs-fresh-salad",
@@ -414,7 +414,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Crisp sliced cucumbers, red onions, tomatoes, and green chilies with fresh lemon wedges.",
     price: 170,
     unitLabel: "Per Plate",
-    image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80",
+    image: "/images/dishes/rs-fresh-salad.webp",
   },
   {
     id: "rs-mint-zeera-raita",
@@ -423,7 +423,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Fresh homemade churned yogurt seasoned with roasted cumin powder and hand-crushed garden mint.",
     price: 180,
     unitLabel: "Per Bowl",
-    image: "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80",
+    image: "/images/dishes/rs-mint-zeera-raita.webp",
   },
   {
     id: "rs-green-sauce",
@@ -432,6 +432,6 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Peshawari spicy chutney made with green chilies, garlic, mint, and vinegar.",
     price: 80,
     unitLabel: "Per Portion",
-    image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80",
+    image: "/images/dishes/rs-green-sauce.webp",
   },
 ];
