@@ -123,16 +123,16 @@ export function Hero() {
   }, [total]);
 
   // The 3 currently visible slots in the carousel:
-  // slot 0 (Left): (activeIndex - 1 + total) % total -> 120 degree
-  // slot 1 (Middle / Center Active): activeIndex -> 90 degree
-  // slot 2 (Right): (activeIndex + 1) % total -> 30 degree
+  // slot 0 (Left): (activeIndex - 1 + total) % total -> -30 degree (tilted towards left)
+  // slot 1 (Middle / Center Active): activeIndex -> 0 degree (upright & centered)
+  // slot 2 (Right): (activeIndex + 1) % total -> 30 degree (tilted towards right)
   const leftIndex = (activeIndex - 1 + total) % total;
   const centerIndex = activeIndex;
   const rightIndex = (activeIndex + 1) % total;
 
   const visibleSlots = [
-    { dish: carouselDishes[leftIndex], pos: "left", angle: 120, scale: 0.88, opacity: 0.7, zIndex: 10 },
-    { dish: carouselDishes[centerIndex], pos: "center", angle: 90, scale: 1.08, opacity: 1, zIndex: 30 },
+    { dish: carouselDishes[leftIndex], pos: "left", angle: -30, scale: 0.88, opacity: 0.7, zIndex: 10 },
+    { dish: carouselDishes[centerIndex], pos: "center", angle: 0, scale: 1.08, opacity: 1, zIndex: 30 },
     { dish: carouselDishes[rightIndex], pos: "right", angle: 30, scale: 0.88, opacity: 0.7, zIndex: 10 },
   ];
 
