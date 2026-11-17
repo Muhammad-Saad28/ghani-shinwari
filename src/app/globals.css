@@ -17,11 +17,16 @@
     --color-sand-light: #EBE3D3;
   }
 
-  body {
+  html, body {
     background-color: var(--color-alabaster);
     color: var(--color-charcoal);
     font-family: var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     overflow-x: hidden;
+    cursor: url('/restaurant-pin-cursor.svg') 16 28, auto;
+  }
+
+  a, button, [role="button"], input, select, textarea {
+    cursor: url('/restaurant-pin-cursor.svg') 16 28, pointer;
   }
 
   ::selection {
