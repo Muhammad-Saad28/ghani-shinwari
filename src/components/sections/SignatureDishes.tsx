@@ -32,7 +32,7 @@ export function SignatureDishes() {
                 className={isLarge ? "md:col-span-2 lg:col-span-2" : "md:col-span-1 lg:col-span-1"}
               >
                 <div
-                  className="group flex flex-col bg-[#F7F2E8] border border-[#DED2BE] hover:border-[#8F1725] transition-all duration-500 rounded-xs overflow-hidden shadow-xs hover:shadow-2xl hover:-translate-y-1.5 h-full"
+                  className="group flex flex-col glass-card-light hover:border-[#8F1725] transition-all duration-500 rounded-xs overflow-hidden shadow-md hover:shadow-2xl hover:-translate-y-1.5 h-full"
                 >
                   {/* Image Section with Zoom Effect */}
                   <div

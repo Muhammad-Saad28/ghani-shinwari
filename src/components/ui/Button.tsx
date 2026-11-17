@@ -29,15 +29,15 @@ export function Button({
 
   const variantStyles = {
     crimson:
-      "bg-[#8F1725] hover:bg-[#70111C] text-[#F7F2E8] shadow-lg shadow-[#8F1725]/30 hover:shadow-xl hover:shadow-[#8F1725]/45 hover:-translate-y-0.5 active:translate-y-0 border border-[#8F1725]",
+      "glass-btn-crimson text-[#F7F2E8] hover:-translate-y-0.5 active:translate-y-0 font-semibold",
     gold:
-      "bg-[#E6B83F] hover:bg-[#F3C44E] text-[#292522] font-bold shadow-lg shadow-[#E6B83F]/25 hover:shadow-xl hover:shadow-[#E6B83F]/40 hover:-translate-y-0.5 active:translate-y-0 border border-[#E6B83F]",
+      "glass-btn-gold text-[#211C16] font-bold hover:-translate-y-0.5 active:translate-y-0",
     outline:
-      "bg-transparent border-2 border-[#8F1725] text-[#8F1725] hover:bg-[#8F1725] hover:text-[#F7F2E8] hover:-translate-y-0.5 active:translate-y-0",
+      "bg-transparent backdrop-blur-md border border-[#8F1725] text-[#8F1725] hover:bg-[#8F1725] hover:text-[#F7F2E8] hover:-translate-y-0.5 active:translate-y-0 shadow-sm",
     alabaster:
-      "bg-[#F7F2E8] hover:bg-white text-[#8F1725] font-semibold border border-[#DED2BE] shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0",
+      "glass-panel-light hover:bg-white/95 text-[#8F1725] font-semibold border border-[#DED2BE] shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0",
     glass:
-      "glass-panel-dark text-[#F7F2E8] hover:bg-[#70111C]/90 border border-[#E6B83F]/50 shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0",
+      "glass-panel-dark text-[#F7F2E8] hover:bg-[#70111C]/90 border border-[#E6B83F]/50 shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 backdrop-blur-xl",
     ghost:
       "bg-transparent text-[#292522] hover:text-[#8F1725] hover:bg-[#8F1725]/5",
   };

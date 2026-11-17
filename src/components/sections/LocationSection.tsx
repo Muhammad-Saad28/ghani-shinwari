@@ -48,7 +48,7 @@ export function LocationSection() {
           {branches.map((b, idx) => (
             <ScrollFade key={idx} delay={0.1 * idx} distance={20}>
               <div
-                className="p-6 rounded-xs bg-[#FAF6EF] border border-[#DED2BE] hover:border-[#8F1725] transition-all card-hover-lift flex flex-col justify-between shadow-xs h-full"
+                className="p-6 rounded-xs glass-card-light hover:border-[#8F1725] transition-all card-hover-lift flex flex-col justify-between shadow-md hover:shadow-xl h-full"
               >
                 <div>
                   <span className="text-[10px] uppercase tracking-wider text-[#8F1725] font-bold block mb-1">
@@ -77,7 +77,7 @@ export function LocationSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           
           {/* Left Direct Booking & Inquiries (7 cols) */}
-          <div className="lg:col-span-7 p-8 sm:p-12 bg-[#FAF6EF] border border-[#DED2BE] rounded-xs shadow-sm flex flex-col justify-between">
+          <div className="lg:col-span-7 p-8 sm:p-12 glass-card-light rounded-xs shadow-lg flex flex-col justify-between">
             <div>
               <span className="text-xs uppercase tracking-[0.25em] text-[#8F1725] font-bold block mb-2">
                 Lahore Culinary Headquarters
@@ -156,7 +156,7 @@ export function LocationSection() {
           </div>
 
           {/* Right WhatsApp Dispatch Card (5 cols) */}
-          <div className="lg:col-span-5 p-8 sm:p-10 bg-[#8F1725] text-[#F7F2E8] rounded-xs shadow-xl border-t-4 border-[#E6B83F] flex flex-col justify-between relative overflow-hidden">
+          <div className="lg:col-span-5 p-8 sm:p-10 glass-panel-dark text-[#F7F2E8] rounded-xs shadow-2xl border-t-4 border-[#E6B83F] flex flex-col justify-between relative overflow-hidden">
             <div className="relative z-10">
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#70111C] border border-[#E6B83F]/30 text-xs text-[#E6B83F] font-bold mb-4">
                 <ShieldCheck className="w-3.5 h-3.5" />

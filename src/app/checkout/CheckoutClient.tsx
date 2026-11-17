@@ -95,7 +95,7 @@ export function CheckoutClient() {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Checkout Form (7 cols) */}
-          <div className="lg:col-span-7 bg-[#FAF6EF] border border-[#DED2BE] rounded-xs p-6 sm:p-8 shadow-sm">
+          <div className="lg:col-span-7 glass-card-light rounded-xs p-6 sm:p-8 shadow-xl">
             <h3 className="font-serif text-2xl text-[#292522] mb-2">
               Customer & Delivery Details
             </h3>
@@ -209,9 +209,9 @@ export function CheckoutClient() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full inline-flex items-center justify-center gap-2.5 py-4 px-6 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm uppercase tracking-widest rounded-xs shadow-lg shadow-emerald-700/20 active:translate-y-0.5 transition-all cursor-pointer"
+                className="w-full inline-flex items-center justify-center gap-2.5 py-4 px-6 glass-btn-gold text-[#211C16] font-bold text-sm uppercase tracking-widest rounded-xs shadow-xl active:translate-y-0.5 transition-all cursor-pointer"
               >
-                <MessageCircle className="w-5 h-5 fill-white text-emerald-600" />
+                <MessageCircle className="w-5 h-5 fill-[#211C16] text-[#E6B83F]" />
                 <span>
                   {isSubmitting ? "Connecting..." : "Place Order on WhatsApp (+92 305 4449151)"}
                 </span>
@@ -224,7 +224,7 @@ export function CheckoutClient() {
           </div>
 
           {/* Order Summary Sidebar (5 cols) */}
-          <div className="lg:col-span-5 bg-[#FAF6EF] border border-[#DED2BE] rounded-xs p-6 shadow-sm space-y-6">
+          <div className="lg:col-span-5 glass-card-light rounded-xs p-6 shadow-xl space-y-6">
             <h3 className="font-serif text-2xl text-[#292522] border-b border-[#DED2BE] pb-3">
               Items in Your Order ({totalCount})
             </h3>

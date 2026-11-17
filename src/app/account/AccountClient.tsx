@@ -35,7 +35,7 @@ export function AccountClient() {
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
           {/* Left Profile Card (4 cols) */}
-          <div className="md:col-span-4 bg-[#FAF6EF] border border-[#DED2BE] rounded-xs p-6 shadow-sm text-center">
+          <div className="md:col-span-4 glass-card-light rounded-xs p-6 shadow-xl text-center">
             <div className="w-20 h-20 rounded-full bg-[#8F1725] text-[#E6B83F] mx-auto flex items-center justify-center text-2xl font-serif font-bold shadow-md mb-4 border-2 border-[#E6B83F]">
               {profile.name.charAt(0)}
             </div>
@@ -72,7 +72,7 @@ export function AccountClient() {
           </div>
 
           {/* Right Profile Details / Settings (8 cols) */}
-          <div className="md:col-span-8 bg-[#FAF6EF] border border-[#DED2BE] rounded-xs p-6 sm:p-8 shadow-sm">
+          <div className="md:col-span-8 glass-card-light rounded-xs p-6 sm:p-8 shadow-xl">
             <div className="flex items-center justify-between pb-4 border-b border-[#DED2BE] mb-6">
               <div>
                 <h4 className="font-serif text-2xl text-[#292522]">

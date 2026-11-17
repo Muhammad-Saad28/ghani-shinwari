@@ -58,7 +58,7 @@ export function CartClient() {
             {cart.map((item) => (
               <div
                 key={item.id}
-                className="p-4 sm:p-5 bg-[#FAF6EF] border border-[#DED2BE] rounded-xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-xs"
+                className="p-4 sm:p-5 glass-card-light rounded-xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-md hover:shadow-xl transition-all"
               >
                 <div className="flex items-center gap-4">
                   <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-xs overflow-hidden shrink-0 border border-[#DED2BE] bg-[#F7F2E8]">
@@ -136,7 +136,7 @@ export function CartClient() {
           </div>
 
           {/* Order Summary & Checkout Action (4 cols) */}
-          <div className="lg:col-span-4 bg-[#FAF6EF] border border-[#DED2BE] rounded-xs p-6 shadow-sm space-y-6">
+          <div className="lg:col-span-4 glass-card-light rounded-xs p-6 shadow-xl space-y-6">
             <h3 className="font-serif text-2xl text-[#292522] border-b border-[#DED2BE] pb-3">
               Order Summary
             </h3>
