@@ -158,12 +158,12 @@ export function Hero() {
 
               <Button
                 href="/signatures"
-                variant="glass"
+                variant="crimson"
                 size="lg"
-                className="w-full sm:w-auto px-7 py-4"
+                className="w-full sm:w-auto px-7 py-4 glass-panel-dark text-white hover:text-white border border-[#E6B83F]/50 shadow-xl"
               >
                 <Sparkles className="w-4 h-4 mr-2 text-[#E6B83F]" />
-                <span>View Signatures</span>
+                <span className="text-white font-bold tracking-wider">View Signatures</span>
               </Button>
             </div>
 
@@ -247,11 +247,11 @@ export function Hero() {
 
                 <button
                   onClick={() => addToCart(activeDish.menuItem, "Full", activeDish.priceFull)}
-                  className="inline-flex items-center gap-1.5 px-4 py-2.5 bg-[#8F1725] hover:bg-[#70111C] text-[#F7F2E8] text-xs uppercase tracking-wider font-bold rounded-xs shadow-md border border-[#E6B83F]/40 transition-all active:translate-y-0.5 cursor-pointer"
+                  className="inline-flex items-center gap-1.5 px-4 py-2.5 glass-btn-crimson text-white text-xs uppercase tracking-wider font-bold rounded-xs shadow-lg border border-[#E6B83F]/60 transition-all active:translate-y-0.5 cursor-pointer"
                   title={`Add Full ${activeDish.title} to cart`}
                 >
                   <Plus className="w-3.5 h-3.5 text-[#E6B83F]" />
-                  <span>Add to Cart</span>
+                  <span className="text-white">Add to Cart</span>
                 </button>
               </div>
 

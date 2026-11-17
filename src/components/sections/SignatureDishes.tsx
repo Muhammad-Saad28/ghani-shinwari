@@ -84,10 +84,10 @@ export function SignatureDishes() {
                       </span>
                       <Link
                         href="/menu"
-                        className="inline-flex items-center gap-1.5 text-xs uppercase tracking-wider text-[#292522] group-hover:text-[#8F1725] font-bold transition-all group-hover:translate-x-1"
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xs glass-btn-crimson text-white text-xs uppercase tracking-wider font-bold shadow-md hover:shadow-lg transition-all active:translate-y-0.5"
                       >
-                        <span>Order on Menu</span>
-                        <ArrowRight className="w-3.5 h-3.5 text-[#8F1725]" />
+                        <span className="text-white">Order on Menu</span>
+                        <ArrowRight className="w-3.5 h-3.5 text-[#E6B83F]" />
                       </Link>
                     </div>
                   </div>

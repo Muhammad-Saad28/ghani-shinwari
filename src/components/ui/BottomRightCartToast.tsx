@@ -13,7 +13,7 @@ export function BottomRightCartToast() {
   return (
     <aside
       aria-label="Cart Notification"
-      className="fixed bottom-6 right-6 z-50 max-w-sm w-[calc(100vw-3rem)] bg-[#70111C] text-[#F7F2E8] border-2 border-[#E6B83F] shadow-2xl rounded-xs p-4 animate-in slide-in-from-bottom-5 duration-300"
+      className="fixed bottom-6 right-6 z-50 max-w-sm w-[calc(100vw-3rem)] glass-panel-dark text-white border-2 border-[#E6B83F] shadow-2xl rounded-xs p-4 animate-in slide-in-from-bottom-5 duration-300 backdrop-blur-xl"
     >
       <div className="flex items-start justify-between gap-3">
         <div className="flex items-start gap-3">
@@ -51,9 +51,9 @@ export function BottomRightCartToast() {
         <Link
           href="/cart"
           onClick={dismissToast}
-          className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-[#E6B83F] hover:bg-[#F0C655] text-[#292522] text-xs uppercase tracking-wider font-bold rounded-xs shadow transition-all active:translate-y-0.5"
+          className="inline-flex items-center gap-1.5 px-4 py-2 glass-btn-gold text-[#211C16] text-xs uppercase tracking-wider font-bold rounded-xs shadow-lg transition-all active:translate-y-0.5 cursor-pointer"
         >
-          <ShoppingBag className="w-3.5 h-3.5" />
+          <ShoppingBag className="w-3.5 h-3.5 text-[#211C16]" />
           <span>View Cart</span>
         </Link>
       </div>
