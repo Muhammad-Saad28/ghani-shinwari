@@ -97,9 +97,12 @@ export default function RootLayout({
     sameAs: [RESTAURANT_CONFIG.social.instagram],
     address: {
       "@type": "PostalAddress",
+      streetAddress: "General Truck Stand, 22/A Ravi Rd, Qila Lachman Singh",
       addressLocality: "Lahore",
+      addressRegion: "Punjab",
       addressCountry: "PK",
     },
+    telephone: "+92 305 4449151",
   };
 
   return (

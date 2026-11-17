@@ -10,7 +10,7 @@ export function LocationSection() {
   const branches = [
     {
       name: "Ravi Road Flagship",
-      address: "General Truck Stand, Ravi Road, Lahore",
+      address: "General Truck Stand, 22/A Ravi Rd, Qila Lachman Singh, Lahore",
       tag: "Original Open-Air Hearth",
       timings: "12:00 PM – 3:00 AM",
     },
@@ -93,10 +93,10 @@ export function LocationSection() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-[#8F1725] text-xs uppercase tracking-wider mb-0.5">
-                      Main Hubs
+                      Main Flagship Address
                     </h4>
-                    <p className="text-[#5C554F] leading-relaxed">
-                      General Truck Stand Ravi Road, Bedian Road DHA Phase 6, Bahria Town, and Johar Town, Lahore.
+                    <p className="text-[#5C554F] leading-relaxed font-medium">
+                      General Truck Stand, 22/A Ravi Rd, Qila Lachman Singh, Lahore
                     </p>
                   </div>
                 </div>
@@ -133,7 +133,7 @@ export function LocationSection() {
 
             <div className="pt-8 mt-8 border-t border-[#DED2BE] flex flex-col sm:flex-row items-center gap-4">
               <Button
-                href={`https://maps.google.com/?q=Ghani+Shinwari+Restaurant+Lahore`}
+                href={`https://maps.google.com/?q=${encodeURIComponent("Ghani Shinwari Restaurant, General Truck Stand, 22/A Ravi Rd, Qila Lachman Singh, Lahore")}`}
                 isExternal
                 variant="crimson"
                 size="md"

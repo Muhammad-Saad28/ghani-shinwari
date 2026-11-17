@@ -15,10 +15,10 @@ export const RESTAURANT_CONFIG = {
     orderWhatsAppDisplay: "+92 305 4449151",
   },
   placeholders: {
-    address: "Lahore, Punjab, Pakistan",
-    locationNote: "Flagship and local dining branches — contact directly for nearest branch details.",
-    phone: "+92 300 0000000",
-    openingHours: "Open Daily: 12:00 PM – Late Midnight",
+    address: "General Truck Stand, 22/A Ravi Rd, Qila Lachman Singh, Lahore",
+    locationNote: "Flagship at General Truck Stand Ravi Road, Lahore.",
+    phone: "+92 305 4449151",
+    openingHours: "Open Daily: 12:00 PM – 3:00 AM Midnight",
   },
   navLinks: [
     { label: "About", href: "/about" },
