@@ -16,13 +16,13 @@ export function SignatureDishes() {
         <SectionHeading
           eyebrow="Culinary Masterpieces"
           title="Signature Dishes"
-          subtitle="Discover the six authentic creations that define the taste of Ghani Shinwari. Each dish is prepared fresh upon every single order."
+          subtitle="Discover the authentic hallmark creations that define the taste of Ghani Shinwari. Each dish is prepared fresh upon every single order."
         />
 
-        {/* Varied Grid: 2 Large Featured + 4 Supporting Cards with Hover Elevation */}
+        {/* Varied Grid: Featured & Supporting Cards with Hover Elevation */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {SIGNATURE_DISHES_LIST.map((dish, index) => {
-            const isLarge = dish.isFeaturedLarge;
+            const isLarge = index === 0;
             return (
               <div
                 key={dish.id}

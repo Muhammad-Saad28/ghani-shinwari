@@ -46,15 +46,6 @@ export const SIGNATURE_DISHES_LIST = [
     image: "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=1000&q=85",
     isFeaturedLarge: false,
   },
-  {
-    id: "sig-peshawari-sajji",
-    name: "Peshawari Sajji",
-    category: "Open Ember Whole Roast",
-    description: "Whole tender chicken seasoned with rock salt and slow-roasted on circular skewers around smoking open-flame hardwood embers.",
-    priceInfo: "Full Bird: PKR 2,490",
-    image: "https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?auto=format&fit=crop&w=1200&q=85",
-    isFeaturedLarge: true,
-  },
 ];
 
 export const GALLERY_PHOTOS: GalleryPhoto[] = [

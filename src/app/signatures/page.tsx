@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/Button";
 export const metadata: Metadata = {
   title: "Signature Dishes — Ghani Shinwari",
   description:
-    "Explore the six authentic signature dishes of Ghani Shinwari: Shinwari Karahi, Sulemani Karahi, Namkeen Tikka, Rosh, Kabli Pulao, and Sajji.",
+    "Explore the hallmark authentic signature dishes of Ghani Shinwari: Shinwari Karahi, Sulemani Karahi, Namkeen Tikka, Rosh, and Kabli Pulao.",
 };
 
 export default function SignaturesPage() {
@@ -17,7 +17,7 @@ export default function SignaturesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <SectionHeading
             eyebrow="Culinary Masterpieces"
-            title="The Six Authentic Signatures"
+            title="The Hallmark Signatures"
             subtitle="The definitive creations that define Ghani Shinwari Restaurant. Handcrafted with prime cuts and ancestral fire technique."
             theme="crimson"
             className="mb-0"

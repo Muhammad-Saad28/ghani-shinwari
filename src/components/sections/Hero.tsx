@@ -163,7 +163,7 @@ export function Hero() {
                 className="w-full sm:w-auto px-7 py-4"
               >
                 <Sparkles className="w-4 h-4 mr-2 text-[#E6B83F]" />
-                <span>View 6 Signatures</span>
+                <span>View Signatures</span>
               </Button>
             </div>
 
