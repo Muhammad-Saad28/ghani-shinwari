@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { ScrollFade } from "@/components/ui/ScrollFade";
 import { ArrowRight, Flame, Scale, Clock, HeartHandshake } from "lucide-react";
 
 export function AboutSection() {
@@ -56,27 +57,28 @@ export function AboutSection() {
               className="mb-6 max-w-xl"
             />
 
-            <p className="text-sm sm:text-base text-[#F7F2E8]/85 leading-relaxed mb-8 font-light">
-              While conventional city eateries rely on fried onion pastes and heavy garam masalas to disguise meat quality, Ghani Shinwari honors tribal purism: fresh cuts seared at volcanic heat in cast-iron woks, sealing in rich juices with natural wok-hei smoke.
-            </p>
+            <ScrollFade delay={0.25} distance={20}>
+              <p className="text-sm sm:text-base text-[#F7F2E8]/85 leading-relaxed mb-8 font-light">
+                While conventional city eateries rely on fried onion pastes and heavy garam masalas to disguise meat quality, Ghani Shinwari honors tribal purism: fresh cuts seared at volcanic heat in cast-iron woks, sealing in rich juices with natural wok-hei smoke.
+              </p>
+            </ScrollFade>
 
             {/* 2x2 Craft Feature Grid with dark glass styling */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full mb-10">
               {craftFeatures.map((feat, idx) => (
-                <div
-                  key={idx}
-                  className="p-4 rounded-xs glass-panel-dark border border-[#E6B83F]/25 hover:border-[#E6B83F] transition-all card-hover-lift shadow-md"
-                >
-                  <div className="w-9 h-9 rounded-xs bg-[#70111C] border border-[#E6B83F]/40 flex items-center justify-center mb-3 shadow-sm">
-                    {feat.icon}
+                <ScrollFade key={idx} delay={0.15 * idx} distance={24}>
+                  <div className="p-4 rounded-xs glass-panel-dark border border-[#E6B83F]/25 hover:border-[#E6B83F] transition-all card-hover-lift shadow-md h-full">
+                    <div className="w-9 h-9 rounded-xs bg-[#70111C] border border-[#E6B83F]/40 flex items-center justify-center mb-3 shadow-sm">
+                      {feat.icon}
+                    </div>
+                    <h4 className="font-serif text-base text-[#F7F2E8] font-semibold mb-1">
+                      {feat.title}
+                    </h4>
+                    <p className="text-xs text-[#F7F2E8]/75 leading-relaxed font-light">
+                      {feat.desc}
+                    </p>
                   </div>
-                  <h4 className="font-serif text-base text-[#F7F2E8] font-semibold mb-1">
-                    {feat.title}
-                  </h4>
-                  <p className="text-xs text-[#F7F2E8]/75 leading-relaxed font-light">
-                    {feat.desc}
-                  </p>
-                </div>
+                </ScrollFade>
               ))}
             </div>
 

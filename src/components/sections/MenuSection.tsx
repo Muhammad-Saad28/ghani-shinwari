@@ -5,6 +5,7 @@ import Image from "next/image";
 import { MENU_CATEGORIES, MENU_ITEMS } from "@/lib/menu-data";
 import { MenuCategory, MenuItem } from "@/types";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { ScrollFade } from "@/components/ui/ScrollFade";
 import { useCart } from "@/context/CartContext";
 import { Flame, Sparkles, Plus, ArrowRight } from "lucide-react";
 import Link from "next/link";
@@ -157,51 +158,52 @@ export function MenuSection({
 
         {/* Responsive Menu Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-          {displayedItems.map((item) => (
-            <div
-              key={item.id}
-              className="p-5 sm:p-6 rounded-xs glass-panel-dark border border-[#E6B83F]/30 hover:border-[#E6B83F] transition-all duration-300 flex flex-col sm:flex-row gap-5 items-start shadow-xl card-hover-lift"
-            >
-              {/* Dish Image */}
-              <div className="relative w-full sm:w-32 h-32 rounded-xs overflow-hidden shrink-0 bg-[#211C16] border border-[#E6B83F]/30">
-                <Image
-                  src={item.image}
-                  alt={item.name}
-                  fill
-                  sizes="(max-width: 640px) 100vw, 130px"
-                  className="object-cover object-center hover:scale-105 transition-transform duration-500"
-                />
-                {item.isSignature && (
-                  <div className="absolute top-1.5 left-1.5 bg-[#8F1725] text-[#F7F2E8] text-[9px] uppercase tracking-wider font-bold px-1.5 py-0.5 rounded-xs flex items-center gap-1 shadow-sm border border-[#E6B83F]/40">
-                    <Sparkles className="w-2.5 h-2.5 text-[#E6B83F]" />
-                    <span>Popular</span>
-                  </div>
-                )}
-              </div>
-
-              {/* Details & Interactive Add Buttons */}
-              <div className="flex-1 flex flex-col justify-between h-full w-full">
-                <div>
-                  <div className="flex items-start justify-between gap-3 mb-1">
-                    <h3 className="font-serif text-xl text-[#F7F2E8] font-medium leading-snug">
-                      {item.name}
-                    </h3>
-                  </div>
-
-                  <p className="text-xs text-[#F7F2E8]/80 leading-relaxed mb-4">
-                    {item.description}
-                  </p>
+          {displayedItems.map((item, idx) => (
+            <ScrollFade key={item.id} delay={0.08 * (idx % 8)} distance={24}>
+              <div
+                className="p-5 sm:p-6 rounded-xs glass-panel-dark border border-[#E6B83F]/30 hover:border-[#E6B83F] transition-all duration-300 flex flex-col sm:flex-row gap-5 items-start shadow-xl card-hover-lift h-full"
+              >
+                {/* Dish Image */}
+                <div className="relative w-full sm:w-32 h-32 rounded-xs overflow-hidden shrink-0 bg-[#211C16] border border-[#E6B83F]/30">
+                  <Image
+                    src={item.image}
+                    alt={item.name}
+                    fill
+                    sizes="(max-width: 640px) 100vw, 130px"
+                    className="object-cover object-center hover:scale-105 transition-transform duration-500"
+                  />
+                  {item.isSignature && (
+                    <div className="absolute top-1.5 left-1.5 bg-[#8F1725] text-[#F7F2E8] text-[9px] uppercase tracking-wider font-bold px-1.5 py-0.5 rounded-xs flex items-center gap-1 shadow-sm border border-[#E6B83F]/40">
+                      <Sparkles className="w-2.5 h-2.5 text-[#E6B83F]" />
+                      <span>Popular</span>
+                    </div>
+                  )}
                 </div>
 
-                <div className="pt-3 border-t border-[#E6B83F]/20 flex flex-wrap items-center justify-between gap-2">
-                  <span className="flex items-center gap-1 text-[11px] uppercase tracking-wider text-[#E6B83F] font-semibold">
-                    <Flame className="w-3.5 h-3.5 text-[#E6B83F]" />
-                    {item.category}
-                  </span>
-                  <div>{renderAddButtons(item)}</div>
+                {/* Details & Interactive Add Buttons */}
+                <div className="flex-1 flex flex-col justify-between h-full w-full">
+                  <div>
+                    <div className="flex items-start justify-between gap-3 mb-1">
+                      <h3 className="font-serif text-xl text-[#F7F2E8] font-medium leading-snug">
+                        {item.name}
+                      </h3>
+                    </div>
+
+                    <p className="text-xs text-[#F7F2E8]/80 leading-relaxed mb-4">
+                      {item.description}
+                    </p>
+                  </div>
+
+                  <div className="pt-3 border-t border-[#E6B83F]/20 flex flex-wrap items-center justify-between gap-2">
+                    <span className="flex items-center gap-1 text-[11px] uppercase tracking-wider text-[#E6B83F] font-semibold">
+                      <Flame className="w-3.5 h-3.5 text-[#E6B83F]" />
+                      {item.category}
+                    </span>
+                    <div>{renderAddButtons(item)}</div>
+                  </div>
                 </div>
               </div>
-            </div>
+            </ScrollFade>
           ))}
         </div>
         {/* View All Button on Homepage if items are truncated */}

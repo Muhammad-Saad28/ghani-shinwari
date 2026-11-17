@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { ScrollFade } from "@/components/ui/ScrollFade";
 import { Button } from "@/components/ui/Button";
 import { EXPERIENCE_POINTS } from "@/lib/content-data";
 import { Flame, UtensilsCrossed, Sparkles, ShieldCheck, ArrowRight, Award } from "lucide-react";
@@ -38,53 +39,54 @@ export function ExperienceSection() {
         {/* 4 Feature Pillars with Hover Image Peek and Glass Details */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {EXPERIENCE_POINTS.map((point, index) => (
-            <div
-              key={index}
-              className="group p-8 rounded-xs glass-panel-dark border border-[#E6B83F]/30 hover:border-[#E6B83F] transition-all duration-500 flex flex-col justify-between card-hover-lift shadow-xl"
-            >
-              <div>
-                {/* Header Icon + Number */}
-                <div className="flex items-center justify-between mb-6">
-                  <div className="w-13 h-13 rounded-xs bg-[#70111C] border border-[#E6B83F]/40 flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:border-[#E6B83F] transition-all duration-300">
-                    {iconMap[point.icon]}
+            <ScrollFade key={index} delay={0.12 * index} distance={24}>
+              <div
+                className="group p-8 rounded-xs glass-panel-dark border border-[#E6B83F]/30 hover:border-[#E6B83F] transition-all duration-500 flex flex-col justify-between card-hover-lift shadow-xl h-full"
+              >
+                <div>
+                  {/* Header Icon + Number */}
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="w-13 h-13 rounded-xs bg-[#70111C] border border-[#E6B83F]/40 flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:border-[#E6B83F] transition-all duration-300">
+                      {iconMap[point.icon]}
+                    </div>
+                    <span className="font-serif text-3xl font-light text-[#E6B83F]/40 group-hover:text-[#E6B83F] transition-colors">
+                      0{index + 1}
+                    </span>
                   </div>
-                  <span className="font-serif text-3xl font-light text-[#E6B83F]/40 group-hover:text-[#E6B83F] transition-colors">
-                    0{index + 1}
-                  </span>
+
+                  {/* Title */}
+                  <h3 className="font-serif text-2xl text-[#F7F2E8] font-normal mb-3 leading-snug group-hover:text-[#E6B83F] transition-colors">
+                    {point.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-xs sm:text-sm text-[#F7F2E8]/80 leading-relaxed font-light mb-6">
+                    {point.description}
+                  </p>
                 </div>
 
-                {/* Title */}
-                <h3 className="font-serif text-2xl text-[#F7F2E8] font-normal mb-3 leading-snug group-hover:text-[#E6B83F] transition-colors">
-                  {point.title}
-                </h3>
+                {/* Bottom Peek Image preview thumbnail */}
+                <div className="pt-4 border-t border-[#F7F2E8]/15 flex items-center justify-between">
+                  <div className="relative w-12 h-12 rounded-xs overflow-hidden border border-[#E6B83F]/40 shrink-0">
+                    <Image
+                      src={imagesMap[index]}
+                      alt={point.title}
+                      fill
+                      sizes="48px"
+                      className="object-cover object-center group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
 
-                {/* Description */}
-                <p className="text-xs sm:text-sm text-[#F7F2E8]/80 leading-relaxed font-light mb-6">
-                  {point.description}
-                </p>
-              </div>
-
-              {/* Bottom Peek Image preview thumbnail */}
-              <div className="pt-4 border-t border-[#F7F2E8]/15 flex items-center justify-between">
-                <div className="relative w-12 h-12 rounded-xs overflow-hidden border border-[#E6B83F]/40 shrink-0">
-                  <Image
-                    src={imagesMap[index]}
-                    alt={point.title}
-                    fill
-                    sizes="48px"
-                    className="object-cover object-center group-hover:scale-110 transition-transform duration-500"
-                  />
+                  <Link
+                    href="/experience"
+                    className="text-[11px] uppercase tracking-wider text-[#E6B83F] hover:text-white font-bold flex items-center gap-1 transition-colors"
+                  >
+                    <span>Discover</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
                 </div>
-
-                <Link
-                  href="/experience"
-                  className="text-[11px] uppercase tracking-wider text-[#E6B83F] hover:text-white font-bold flex items-center gap-1 transition-colors"
-                >
-                  <span>Discover</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </Link>
               </div>
-            </div>
+            </ScrollFade>
           ))}
         </div>
 

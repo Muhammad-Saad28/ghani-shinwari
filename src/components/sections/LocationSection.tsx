@@ -1,6 +1,7 @@
 import React from "react";
 import { RESTAURANT_CONFIG } from "@/lib/config";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { ScrollFade } from "@/components/ui/ScrollFade";
 import { Button } from "@/components/ui/Button";
 import { InstagramIcon } from "@/components/ui/InstagramIcon";
 import { MapPin, Phone, Clock, Navigation, ArrowUpRight, MessageCircle, ShieldCheck } from "lucide-react";
@@ -45,29 +46,30 @@ export function LocationSection() {
         {/* 4 Lahore Branches Spotlight Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {branches.map((b, idx) => (
-            <div
-              key={idx}
-              className="p-6 rounded-xs bg-[#FAF6EF] border border-[#DED2BE] hover:border-[#8F1725] transition-all card-hover-lift flex flex-col justify-between shadow-xs"
-            >
-              <div>
-                <span className="text-[10px] uppercase tracking-wider text-[#8F1725] font-bold block mb-1">
-                  {b.tag}
-                </span>
-                <h4 className="font-serif text-xl text-[#292522] font-semibold mb-2">
-                  {b.name}
-                </h4>
-                <p className="text-xs text-[#5C554F] leading-relaxed mb-4">
-                  {b.address}
-                </p>
-              </div>
+            <ScrollFade key={idx} delay={0.1 * idx} distance={20}>
+              <div
+                className="p-6 rounded-xs bg-[#FAF6EF] border border-[#DED2BE] hover:border-[#8F1725] transition-all card-hover-lift flex flex-col justify-between shadow-xs h-full"
+              >
+                <div>
+                  <span className="text-[10px] uppercase tracking-wider text-[#8F1725] font-bold block mb-1">
+                    {b.tag}
+                  </span>
+                  <h4 className="font-serif text-xl text-[#292522] font-semibold mb-2">
+                    {b.name}
+                  </h4>
+                  <p className="text-xs text-[#5C554F] leading-relaxed mb-4">
+                    {b.address}
+                  </p>
+                </div>
 
-              <div className="pt-3 border-t border-[#DED2BE] flex items-center justify-between text-[11px] text-[#5C554F]">
-                <span className="flex items-center gap-1">
-                  <Clock className="w-3.5 h-3.5 text-[#8F1725]" />
-                  {b.timings}
-                </span>
+                <div className="pt-3 border-t border-[#DED2BE] flex items-center justify-between text-[11px] text-[#5C554F]">
+                  <span className="flex items-center gap-1">
+                    <Clock className="w-3.5 h-3.5 text-[#8F1725]" />
+                    {b.timings}
+                  </span>
+                </div>
               </div>
-            </div>
+            </ScrollFade>
           ))}
         </div>
 
