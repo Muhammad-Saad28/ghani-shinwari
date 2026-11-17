@@ -1,61 +1,40 @@
-export interface RestaurantBranch {
-  id: string;
-  name: string;
-  tagline?: string;
-  address: string;
-  city: string;
-  phone: string;
-  whatsapp?: string;
-  openingHours: string;
-  isFlagship?: boolean;
-  mapQuery?: string;
-}
-
 export interface MenuItem {
   id: string;
   name: string;
-  nativeName?: string;
   category: MenuCategory;
   description: string;
-  unitWeight?: string; // e.g. "1 KG", "Half KG", "Per Skewer"
-  price: number; // PKR
+  price?: number;
+  priceHalf?: number;
+  priceFull?: number;
+  priceSmall?: number;
+  priceLarge?: number;
+  unitLabel?: string; // e.g. "Half (0.5kg) / Full (1kg)", "5 Pcs", "Full Bird", etc.
   isSignature?: boolean;
-  isPopular?: boolean;
-  isNew?: boolean;
-  spicinessLevel?: 1 | 2 | 3;
   image: string;
 }
 
 export type MenuCategory =
-  | "karahi"
-  | "rosh"
+  | "mutton"
+  | "lamb"
   | "bbq"
-  | "pulao"
-  | "breads"
-  | "beverages-desserts";
+  | "chicken"
+  | "beef"
+  | "tandoori"
+  | "drinks"
+  | "raita-salad";
 
-export interface CategoryInfo {
+export interface CategoryTab {
   id: MenuCategory;
   name: string;
-  description: string;
-  iconName?: string;
+  urduName?: string;
+  count?: number;
 }
 
-export interface ReviewItem {
-  id: string;
-  author: string;
-  source: string;
-  location: string;
-  rating: number;
-  text: string;
-  date?: string;
-}
-
-export interface GalleryImage {
+export interface GalleryPhoto {
   id: string;
   title: string;
-  category: "food" | "ambiance" | "kitchen" | "cultural";
-  src: string;
+  category: "karahi" | "bbq" | "dining" | "heritage";
+  image: string;
   alt: string;
-  aspectRatio?: "square" | "landscape" | "portrait";
+  span?: string; // for masonry/editorial layout
 }
