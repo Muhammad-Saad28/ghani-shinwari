@@ -38,21 +38,26 @@ export function InstagramSection() {
   ];
 
   return (
-    <section className="py-28 md:py-36 bg-[#FAF6EF] text-[#292522] border-b border-[#DED2BE] relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section className="py-28 md:py-36 bg-[#8F1725] text-[#F7F2E8] border-b border-[#E6B83F]/30 relative overflow-hidden">
+      {/* Subtle luxury ambient glow & texture */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#70111C] via-[#8F1725] to-[#47080F] pointer-events-none" />
+      <div className="absolute -top-32 -left-32 w-96 h-96 bg-[#E6B83F]/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-[#B58A2B]/10 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         
         {/* Header Eyebrow */}
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#8F1725]/10 text-[#8F1725] text-xs uppercase tracking-[0.25em] font-bold mb-4">
-          <Camera className="w-3.5 h-3.5 text-[#8F1725]" />
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#70111C] border border-[#E6B83F]/30 text-[#E6B83F] text-xs uppercase tracking-[0.25em] font-bold mb-4 shadow-md">
+          <Camera className="w-3.5 h-3.5 text-[#E6B83F]" />
           <span>Social Media Archive</span>
         </div>
 
-        <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl text-[#292522] font-normal mb-4">
+        <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl text-[#F7F2E8] font-normal mb-4">
           Follow the Flavour
         </h2>
 
-        <p className="text-sm sm:text-base text-[#5C554F] max-w-xl mx-auto mb-8 font-light leading-relaxed">
-          Behind the scenes at our open flame pits, daily meat selection, and late-night Lahore feast tables. Connect with <span className="font-semibold text-[#8F1725]">@ghani_shinwari</span>.
+        <p className="text-sm sm:text-base text-[#F7F2E8]/85 max-w-xl mx-auto mb-8 font-light leading-relaxed">
+          Behind the scenes at our open flame pits, daily meat selection, and late-night Lahore feast tables. Connect with <span className="font-semibold text-[#E6B83F]">@ghani_shinwari</span>.
         </p>
 
         {/* Action Button */}
@@ -60,11 +65,11 @@ export function InstagramSection() {
           <Button
             href={RESTAURANT_CONFIG.social.instagram}
             isExternal
-            variant="crimson"
+            variant="gold"
             size="lg"
-            className="shadow-xl"
+            className="shadow-2xl hover:shadow-[#E6B83F]/20"
           >
-            <InstagramIcon className="w-4 h-4 mr-2.5 text-[#E6B83F]" />
+            <InstagramIcon className="w-4 h-4 mr-2.5 text-[#211C16]" />
             <span>Follow @ghani_shinwari on Instagram</span>
             <ArrowUpRight className="w-4 h-4 ml-2 opacity-80" />
           </Button>
@@ -78,7 +83,7 @@ export function InstagramSection() {
               href={RESTAURANT_CONFIG.social.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative aspect-[4/5] rounded-xs overflow-hidden bg-[#211C16] border border-[#DED2BE] hover:border-[#8F1725] shadow-sm hover:shadow-2xl transition-all duration-500 card-hover-lift block"
+              className="group relative aspect-[4/5] rounded-xs overflow-hidden bg-[#211C16] border border-[#E6B83F]/30 hover:border-[#E6B83F] shadow-lg hover:shadow-2xl hover:shadow-black/60 transition-all duration-500 card-hover-lift block"
             >
               <Image
                 src={reel.image}
@@ -97,7 +102,7 @@ export function InstagramSection() {
                   {reel.tag}
                 </span>
 
-                <div className="flex items-center gap-1 text-[11px] text-white font-semibold glass-panel-dark px-2 py-0.5 rounded-full">
+                <div className="flex items-center gap-1 text-[11px] text-white font-semibold glass-panel-dark px-2 py-0.5 rounded-full border border-white/10">
                   <Heart className="w-3 h-3 text-[#E6B83F] fill-[#E6B83F]" />
                   <span>{reel.likes}</span>
                 </div>
