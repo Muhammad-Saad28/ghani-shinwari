@@ -29,6 +29,6 @@ export const RESTAURANT_CONFIG = {
   ],
   meta: {
     siteUrl: "https://ghanishinwari.pk",
-    ogImage: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=80",
+    ogImage: "/images/dishes/m-shinwari-karahi.webp",
   },
 };

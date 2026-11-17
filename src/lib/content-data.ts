@@ -125,22 +125,22 @@ export const EXPERIENCE_POINTS = [
 export const INSTAGRAM_PREVIEWS = [
   {
     id: "ig-1",
-    image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=800&q=80",
+    image: "/images/dishes/m-shinwari-karahi.webp",
     caption: "The unmistakable sizzle of our authentic Shinwari Karahi.",
   },
   {
     id: "ig-2",
-    image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80",
+    image: "/images/dishes/m-namkeen-tikka.webp",
     caption: "Salt, fire and coal — Namkeen Tikka perfection.",
   },
   {
     id: "ig-3",
-    image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80",
+    image: "/images/dishes/m-rosh-masala-yakhni.webp",
     caption: "Slow-cooked Peshawari Rosh simmered in rich bone broth.",
   },
   {
     id: "ig-4",
-    image: "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=800&q=80",
+    image: "/images/dishes/m-kabli-pulao.webp",
     caption: "Steaming aromatic Kabli Pulao with sweet glazed carrots and raisins.",
   },
 ];
