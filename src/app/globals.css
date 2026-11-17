@@ -22,11 +22,24 @@
     color: var(--color-charcoal);
     font-family: var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     overflow-x: hidden;
-    cursor: url('/restaurant-pin-cursor.svg') 16 28, auto;
+    cursor: url('/restaurant-pin-cursor.png') 16 27, url('/restaurant-pin-cursor.svg') 16 28, auto;
   }
 
-  a, button, [role="button"], input, select, textarea {
-    cursor: url('/restaurant-pin-cursor.svg') 16 28, pointer;
+  /* Ensure cursor persists on all interactive elements without reverting to default hand pointer */
+  *,
+  *::before,
+  *::after {
+    cursor: inherit;
+  }
+
+  a,
+  button,
+  [role="button"],
+  input[type="submit"],
+  input[type="button"],
+  select,
+  .cursor-pointer {
+    cursor: url('/restaurant-pin-cursor.png') 16 27, url('/restaurant-pin-cursor.svg') 16 28, pointer !important;
   }
 
   ::selection {
