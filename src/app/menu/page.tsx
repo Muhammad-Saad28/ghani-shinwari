@@ -1,31 +1,33 @@
 import type { Metadata } from "next";
 import { MenuSection } from "@/components/sections/MenuSection";
-import { SectionHeading } from "@/components/ui/SectionHeading";
+import { PageHeroBanner } from "@/components/ui/PageHeroBanner";
 
 export const metadata: Metadata = {
-  title: "Our Menu & Verified Pricing",
+  title: "Complete Menu & Verified Prices — Ghani Shinwari",
   description:
-    "Explore the complete authentic menu of Ghani Shinwari Restaurant. All dishes and verified prices in PKR.",
+    "Explore all 36+ verified Shinwari karahis, BBQ skewers, Rosh degchis, and tandoori breads with verified pricing in PKR.",
 };
 
 export default function MenuPage() {
-  return (
-    <div className="pt-28 pb-20 bg-[#F7F2E8] min-h-screen">
-      {/* Header Banner */}
-      <div className="bg-[#8F1725] text-[#F7F2E8] py-16 md:py-20 mb-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <SectionHeading
-            eyebrow="Authentic Khyber Hearth"
-            title="The Grand Shinwari Menu"
-            subtitle="Every cut is weighed and seared live to order with ripe tomatoes, salt, and green chilies. Prices listed in Pakistani Rupees (PKR)."
-            theme="crimson"
-            className="mb-0"
-          />
-        </div>
-      </div>
+  const stats = [
+    { label: "Verified Dishes", value: "36+ Cuts" },
+    { label: "Cooking Fat", value: "100% Pure Tallow" },
+    { label: "Portions", value: "Half / Full (Kg)" },
+    { label: "Order Dispatch", value: "Direct WhatsApp" },
+  ];
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <MenuSection />
+  return (
+    <div className="bg-[#FAF6EF] min-h-screen">
+      {/* Editorial Page Hero Banner */}
+      <PageHeroBanner
+        eyebrow="Authentic Khyber Hearth"
+        title="The Grand Shinwari Menu & Pricing"
+        subtitle="Every mutton, lamb, and chicken cut is seared live to order with fresh tomatoes, coarse rock salt, and whole green chilies. Select your dish to add directly to your order."
+        stats={stats}
+      />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <MenuSection showCategoryFilter={true} isHomeView={false} />
       </div>
     </div>
   );
