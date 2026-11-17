@@ -189,10 +189,22 @@ export function Hero() {
       id="hero"
       className="relative min-h-[92vh] lg:min-h-screen flex flex-col justify-center items-center bg-[#0D0B09] text-[#F7F2E8] overflow-hidden pt-32 pb-16 px-4 sm:px-6 lg:px-8 border-b border-[#E6B83F]/20"
     >
-      {/* Background Ambience & Lighting */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#18080A] via-[#0D0B09] to-[#0A0807] z-0 pointer-events-none" />
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[750px] h-[400px] bg-[#E6B83F]/8 rounded-full blur-[150px] pointer-events-none" />
-      <div className="absolute -top-32 left-1/4 w-96 h-96 bg-[#8F1725]/20 rounded-full blur-[160px] pointer-events-none" />
+      {/* Background Ambience, Cinematic Photography & Lighting */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/hero-hearth-bg.webp"
+          alt="Shinwari Authentic Fire Hearth"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center scale-105 opacity-40 mix-blend-screen pointer-events-none"
+        />
+        {/* Layered cinematic grading: dark obsidian base with deep burgundy & warm amber vignettes */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#18080A]/95 via-[#0D0B09]/80 to-[#0A0807] z-10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0D0B09]/85 via-transparent to-[#0D0B09]/85 z-10" />
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[750px] h-[400px] bg-[#E6B83F]/10 rounded-full blur-[150px] z-10 pointer-events-none" />
+        <div className="absolute -top-32 left-1/4 w-96 h-96 bg-[#8F1725]/25 rounded-full blur-[160px] z-10 pointer-events-none" />
+      </div>
 
       <div className="max-w-6xl mx-auto w-full text-center relative z-10 flex flex-col items-center">
         
