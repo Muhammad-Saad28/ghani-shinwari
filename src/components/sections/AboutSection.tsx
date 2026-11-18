@@ -31,9 +31,10 @@ export function AboutSection() {
   ];
 
   return (
-    <section id="about" className="py-28 md:py-36 bg-[#8F1725] text-[#F7F2E8] border-b border-[#E6B83F]/30 relative overflow-hidden">
-      {/* Background ambient gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#660E18] via-[#8F1725] to-[#47080F] z-0" />
+    <section id="about" className="py-28 md:py-36 bg-[#500B13] text-[#F7F2E8] border-b border-[#E6B83F]/30 relative overflow-hidden">
+      {/* Background ambient gradient seamlessly blending with the dark hearth above */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#500B13] via-[#660E18] to-[#47080F] z-0" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_25%,rgba(143,23,37,0.4),transparent_60%)] z-0" />
       
       {/* Decorative background watermark */}
       <div className="absolute right-0 top-1/2 -translate-y-1/2 font-serif text-[180px] lg:text-[260px] text-[#F7F2E8]/[0.03] select-none pointer-events-none font-bold tracking-tight z-0">

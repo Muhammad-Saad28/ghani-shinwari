@@ -200,10 +200,12 @@ export function Hero() {
           className="object-cover object-center scale-105 opacity-40 mix-blend-screen pointer-events-none"
         />
         {/* Layered cinematic grading: dark obsidian base with deep burgundy & warm amber vignettes */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#18080A]/95 via-[#0D0B09]/80 to-[#0A0807] z-10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#18080A]/95 via-[#0D0B09]/80 to-[#500B13] z-10" />
         <div className="absolute inset-0 bg-gradient-to-r from-[#0D0B09]/85 via-transparent to-[#0D0B09]/85 z-10" />
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[750px] h-[400px] bg-[#E6B83F]/10 rounded-full blur-[150px] z-10 pointer-events-none" />
         <div className="absolute -top-32 left-1/4 w-96 h-96 bg-[#8F1725]/25 rounded-full blur-[160px] z-10 pointer-events-none" />
+        {/* Smooth bottom transition gradient blending seamlessly into the About section's rich crimson */}
+        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-[#500B13] via-[#35070D]/80 to-transparent z-10 pointer-events-none" />
       </div>
 
       <div className="max-w-6xl mx-auto w-full text-center relative z-10 flex flex-col items-center">
