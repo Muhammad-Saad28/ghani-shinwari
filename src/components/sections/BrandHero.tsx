@@ -24,18 +24,17 @@ export function BrandHero() {
       {/* 1. Authentic Hearth Atmosphere Background with Rich Gradients & Overlays */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/hearth-hero-bg.webp"
+          src="/images/hearth-hero-bg-dark.webp"
           alt="Traditional Shinwari Charcoal Hearth & Live Flame"
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center filter brightness-90 contrast-105"
+          className="object-cover object-center filter brightness-95 contrast-105"
         />
 
         {/* Sophisticated editorial vignette & warm hearth lighting */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#140608]/95 via-[#140608]/75 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#140608]/90 via-[#140608]/60 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#140608] via-transparent to-[#140608]/70" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_40%,rgba(143,23,37,0.25),transparent_60%)]" />
       </div>
 
       {/* 2. Main Content Container */}
