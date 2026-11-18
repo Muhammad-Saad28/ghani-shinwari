@@ -14,8 +14,8 @@ export default function HomePage() {
       <BrandHero />
       <Hero />
       <AboutSection />
-      <SignatureDishes />
       <MenuSection limit={8} isHomeView={true} showCategoryFilter={false} />
+      <SignatureDishes />
       <GallerySection />
       <ExperienceSection />
       <InstagramSection />
