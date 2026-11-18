@@ -41,33 +41,33 @@ export function ExperienceSection() {
           {EXPERIENCE_POINTS.map((point, index) => (
             <ScrollFade key={index} delay={0.12 * index} distance={24}>
               <div
-                className="group p-8 rounded-2xl glass-panel-dark border border-[#E6B83F]/30 hover:border-[#E6B83F] transition-all duration-500 flex flex-col justify-between card-hover-lift shadow-xl hover:shadow-2xl h-full"
+                className="group p-8 rounded-2xl bg-[#1C110A] border border-[#E6B83F]/35 hover:border-[#E6B83F] transition-all duration-500 flex flex-col justify-between card-hover-lift shadow-xl hover:shadow-2xl h-full"
               >
                 <div>
                   {/* Header Icon + Number */}
                   <div className="flex items-center justify-between mb-6">
-                    <div className="w-13 h-13 rounded-xl bg-[#23120B] border border-[#E6B83F]/40 flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:border-[#E6B83F] transition-all duration-300">
+                    <div className="w-13 h-13 rounded-xl bg-[#2A1810] border border-[#E6B83F]/40 flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:border-[#E6B83F] transition-all duration-300">
                       {iconMap[point.icon]}
                     </div>
-                    <span className="font-serif text-3xl font-light text-[#E6B83F]/40 group-hover:text-[#E6B83F] transition-colors">
+                    <span className="font-serif text-3xl font-light text-[#E6B83F]/60 group-hover:text-[#E6B83F] transition-colors">
                       0{index + 1}
                     </span>
                   </div>
 
                   {/* Title */}
-                  <h3 className="font-serif text-2xl text-[#F7F2E8] font-normal mb-3 leading-snug group-hover:text-[#E6B83F] transition-colors">
+                  <h3 className="font-serif text-2xl text-[#F7F2E8] font-bold mb-3 leading-snug group-hover:text-[#E6B83F] transition-colors">
                     {point.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-xs sm:text-sm text-[#F7F2E8]/80 leading-relaxed font-light mb-6">
+                  <p className="text-xs sm:text-sm text-[#EAE2D2] leading-relaxed font-normal mb-6">
                     {point.description}
                   </p>
                 </div>
 
                 {/* Bottom Peek Image preview thumbnail */}
-                <div className="pt-4 border-t border-[#F7F2E8]/15 flex items-center justify-between">
-                  <div className="relative w-12 h-12 rounded-xs overflow-hidden border border-[#E6B83F]/40 shrink-0">
+                <div className="pt-4 border-t border-white/10 flex items-center justify-between">
+                  <div className="relative w-12 h-12 rounded-2xl overflow-hidden border border-[#E6B83F]/40 shrink-0">
                     <Image
                       src={imagesMap[index]}
                       alt={point.title}
@@ -91,9 +91,9 @@ export function ExperienceSection() {
         </div>
 
         {/* Experience Trust Banner */}
-        <div className="mt-16 p-8 rounded-xs glass-panel-dark border border-[#E6B83F]/40 flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div className="mt-16 p-8 rounded-2xl glass-panel-dark border border-[#E6B83F]/40 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-4 text-left">
-            <div className="p-3 bg-[#E6B83F] text-[#292522] rounded-xs shrink-0 shadow-md">
+            <div className="p-3 bg-[#E6B83F] text-[#292522] rounded-2xl shrink-0 shadow-md">
               <Award className="w-7 h-7" />
             </div>
             <div>

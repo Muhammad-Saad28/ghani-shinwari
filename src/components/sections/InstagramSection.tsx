@@ -86,7 +86,7 @@ export function InstagramSection() {
                 href={RESTAURANT_CONFIG.social.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative aspect-[4/5] rounded-xs overflow-hidden bg-[#211C16] border border-[#E6B83F]/30 hover:border-[#E6B83F] shadow-lg hover:shadow-2xl hover:shadow-black/60 transition-all duration-500 card-hover-lift block h-full"
+                className="group relative aspect-[4/5] rounded-2xl overflow-hidden bg-[#211C16] border border-[#E6B83F]/30 hover:border-[#E6B83F] shadow-lg hover:shadow-2xl hover:shadow-black/60 transition-all duration-500 card-hover-lift block h-full"
               >
                 <Image
                   src={reel.image}

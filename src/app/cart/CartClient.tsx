@@ -58,10 +58,10 @@ export function CartClient() {
             {cart.map((item) => (
               <div
                 key={item.id}
-                className="p-4 sm:p-5 glass-card-light rounded-xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-md hover:shadow-xl transition-all"
+                className="p-4 sm:p-5 glass-card-light rounded-2xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-md hover:shadow-xl transition-all"
               >
                 <div className="flex items-center gap-4">
-                  <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-xs overflow-hidden shrink-0 border border-[#DED2BE] bg-[#F7F2E8]">
+                  <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden shrink-0 border border-[#DED2BE] bg-[#F7F2E8]">
                     <Image
                       src={item.image}
                       alt={item.name}
@@ -86,7 +86,7 @@ export function CartClient() {
 
                 <div className="flex items-center justify-between sm:justify-end gap-6 w-full sm:w-auto pt-3 sm:pt-0 border-t sm:border-t-0 border-[#DED2BE]">
                   {/* Quantity Stepper */}
-                  <div className="flex items-center border border-[#DED2BE] rounded-xs bg-[#F7F2E8]">
+                  <div className="flex items-center border border-[#DED2BE] rounded-2xl bg-[#F7F2E8]">
                     <button
                       onClick={() => updateQuantity(item.id, -1)}
                       className="p-1.5 hover:bg-[#8F1725] hover:text-white transition-colors cursor-pointer text-[#292522]"
@@ -136,7 +136,7 @@ export function CartClient() {
           </div>
 
           {/* Order Summary & Checkout Action (4 cols) */}
-          <div className="lg:col-span-4 glass-card-light rounded-xs p-6 shadow-xl space-y-6">
+          <div className="lg:col-span-4 glass-card-light rounded-2xl p-6 shadow-xl space-y-6">
             <h3 className="font-serif text-2xl text-[#292522] border-b border-[#DED2BE] pb-3">
               Order Summary
             </h3>
@@ -168,13 +168,13 @@ export function CartClient() {
               <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
 
-            <div className="p-4 bg-[#F7F2E8] border border-[#DED2BE] rounded-xs space-y-2">
+            <div className="p-4 bg-[#F7F2E8] border border-[#DED2BE] rounded-2xl space-y-2">
               <div className="flex items-center gap-2 text-xs font-semibold text-[#8F1725]">
                 <ShieldCheck className="w-4 h-4 text-[#E6B83F]" />
                 <span>Direct WhatsApp Confirmation</span>
               </div>
               <p className="text-[11px] text-[#5C554F] leading-relaxed">
-                When you proceed, your order details and delivery info will be formatted and routed directly to Ghani Shinwari helpdesk (+92 305 4449151) for immediate confirmation.
+                When you proceed, your order details and delivery info will be formatted and routed directly to Ghani Shinwari helpdesk (+92 333 037 1414) for immediate confirmation.
               </p>
             </div>
           </div>

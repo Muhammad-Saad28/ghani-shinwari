@@ -64,7 +64,7 @@ export function CheckoutClient() {
     }-----------------------------------\n*ITEMS ORDERED:*\n${orderItemsSummary}\n-----------------------------------\n*TOTAL AMOUNT:* PKR ${subtotal.toLocaleString()}\n-----------------------------------\nPlease confirm my order and estimated preparation time. Thank you!`;
 
     const encodedMessage = encodeURIComponent(message);
-    const targetWhatsApp = "923054449151"; // Target: +92 305 4449151
+    const targetWhatsApp = "923330371414"; // Target: +92 333 037 1414
     const whatsappUrl = `https://wa.me/${targetWhatsApp}?text=${encodedMessage}`;
 
     // Clear cart upon placing
@@ -90,12 +90,12 @@ export function CheckoutClient() {
         <SectionHeading
           eyebrow="Order Finalization"
           title="Checkout & WhatsApp Order"
-          subtitle="Provide your contact details and location. When confirmed, your order is dispatched immediately to Ghani Shinwari (+92 305 4449151) via WhatsApp."
+          subtitle="Provide your contact details and location. When confirmed, your order is dispatched immediately to Ghani Shinwari (+92 333 037 1414) via WhatsApp."
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Checkout Form (7 cols) */}
-          <div className="lg:col-span-7 glass-card-light rounded-xs p-6 sm:p-8 shadow-xl">
+          <div className="lg:col-span-7 glass-card-light rounded-2xl p-6 sm:p-8 shadow-xl">
             <h3 className="font-serif text-2xl text-[#292522] mb-2">
               Customer & Delivery Details
             </h3>
@@ -117,7 +117,7 @@ export function CheckoutClient() {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder="e.g. Tariq Mehmood"
-                    className="w-full bg-[#F7F2E8] border border-[#DED2BE] focus:border-[#8F1725] rounded-xs pl-10 pr-4 py-3 text-sm text-[#292522] focus:outline-none transition-colors"
+                    className="w-full bg-[#F7F2E8] border border-[#DED2BE] focus:border-[#8F1725] rounded-2xl pl-10 pr-4 py-3 text-sm text-[#292522] focus:outline-none transition-colors"
                   />
                 </div>
               </div>
@@ -135,7 +135,7 @@ export function CheckoutClient() {
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     placeholder="0300 1234567"
-                    className="w-full bg-[#F7F2E8] border border-[#DED2BE] focus:border-[#8F1725] rounded-xs pl-10 pr-4 py-3 text-sm text-[#292522] focus:outline-none transition-colors"
+                    className="w-full bg-[#F7F2E8] border border-[#DED2BE] focus:border-[#8F1725] rounded-2xl pl-10 pr-4 py-3 text-sm text-[#292522] focus:outline-none transition-colors"
                   />
                 </div>
               </div>
@@ -151,7 +151,7 @@ export function CheckoutClient() {
                       type="button"
                       key={type}
                       onClick={() => setOrderType(type)}
-                      className={`py-2.5 px-3 text-xs uppercase tracking-wider font-semibold rounded-xs border transition-all cursor-pointer ${
+                      className={`py-2.5 px-3 text-xs uppercase tracking-wider font-semibold rounded-2xl border transition-all cursor-pointer ${
                         orderType === type
                           ? "bg-[#8F1725] text-[#F7F2E8] border-[#8F1725] shadow-xs"
                           : "bg-[#F7F2E8] text-[#5C554F] border-[#DED2BE] hover:border-[#8F1725]"
@@ -186,7 +186,7 @@ export function CheckoutClient() {
                         ? "House / Flat number, Street, Phase / Block, Lahore..."
                         : "Ravi Road Flagship, DHA Phase 6, or Bahria Town branch..."
                     }
-                    className="w-full bg-[#F7F2E8] border border-[#DED2BE] focus:border-[#8F1725] rounded-xs pl-10 pr-4 py-3 text-sm text-[#292522] focus:outline-none transition-colors"
+                    className="w-full bg-[#F7F2E8] border border-[#DED2BE] focus:border-[#8F1725] rounded-2xl pl-10 pr-4 py-3 text-sm text-[#292522] focus:outline-none transition-colors"
                   />
                 </div>
               </div>
@@ -201,7 +201,7 @@ export function CheckoutClient() {
                   value={notes}
                   onChange={(e) => setNotes(e.target.value)}
                   placeholder="e.g. Extra green chilies, less salt, please pack extra Kandahari naans hot..."
-                  className="w-full bg-[#F7F2E8] border border-[#DED2BE] focus:border-[#8F1725] rounded-xs px-4 py-2.5 text-sm text-[#292522] focus:outline-none transition-colors"
+                  className="w-full bg-[#F7F2E8] border border-[#DED2BE] focus:border-[#8F1725] rounded-2xl px-4 py-2.5 text-sm text-[#292522] focus:outline-none transition-colors"
                 />
               </div>
 
@@ -209,11 +209,11 @@ export function CheckoutClient() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full inline-flex items-center justify-center gap-2.5 py-4 px-6 glass-btn-gold text-[#211C16] font-bold text-sm uppercase tracking-widest rounded-xs shadow-xl active:translate-y-0.5 transition-all cursor-pointer"
+                className="w-full inline-flex items-center justify-center gap-2.5 py-4 px-6 glass-btn-gold text-[#211C16] font-bold text-sm uppercase tracking-widest rounded-2xl shadow-xl active:translate-y-0.5 transition-all cursor-pointer"
               >
                 <MessageCircle className="w-5 h-5 fill-[#211C16] text-[#E6B83F]" />
                 <span>
-                  {isSubmitting ? "Connecting..." : "Place Order on WhatsApp (+92 305 4449151)"}
+                  {isSubmitting ? "Connecting..." : "Place Order on WhatsApp (+92 333 037 1414)"}
                 </span>
               </button>
 
@@ -224,7 +224,7 @@ export function CheckoutClient() {
           </div>
 
           {/* Order Summary Sidebar (5 cols) */}
-          <div className="lg:col-span-5 glass-card-light rounded-xs p-6 shadow-xl space-y-6">
+          <div className="lg:col-span-5 glass-card-light rounded-2xl p-6 shadow-xl space-y-6">
             <h3 className="font-serif text-2xl text-[#292522] border-b border-[#DED2BE] pb-3">
               Items in Your Order ({totalCount})
             </h3>
@@ -267,13 +267,13 @@ export function CheckoutClient() {
               </div>
             </div>
 
-            <div className="p-4 bg-[#70111C] text-[#F7F2E8] rounded-xs border-l-4 border-[#E6B83F] space-y-1">
+            <div className="p-4 bg-[#70111C] text-[#F7F2E8] rounded-2xl border-l-4 border-[#E6B83F] space-y-1">
               <div className="flex items-center gap-2 text-xs font-bold text-[#E6B83F]">
                 <CheckCircle2 className="w-4 h-4" />
                 <span>Live WhatsApp Dispatch</span>
               </div>
               <p className="text-[11px] text-[#F7F2E8]/85 leading-relaxed">
-                Orders are handled directly by Ghani Shinwari staff at <strong>+92 305 4449151</strong> for instant live meat selection, cooking confirmation, and rider dispatch.
+                Orders are handled directly by Ghani Shinwari staff at <strong>+92 333 037 1414</strong> for instant live meat selection, cooking confirmation, and rider dispatch.
               </p>
             </div>
           </div>

@@ -19,7 +19,7 @@ export function Button({
   ...props
 }: ButtonProps) {
   const baseStyles =
-    "inline-flex items-center justify-center font-medium tracking-wide transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#E6B83F]/50 disabled:opacity-50 disabled:pointer-events-none cursor-pointer rounded-xs shimmer-btn select-none";
+    "inline-flex items-center justify-center font-medium tracking-wide transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#E6B83F]/50 disabled:opacity-50 disabled:pointer-events-none cursor-pointer rounded-2xl shimmer-btn select-none";
 
   const sizeStyles = {
     sm: "px-4 py-2 text-xs uppercase tracking-wider",

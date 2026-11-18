@@ -35,7 +35,7 @@ export function AccountClient() {
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
           {/* Left Profile Card (4 cols) */}
-          <div className="md:col-span-4 glass-card-light rounded-xs p-6 shadow-xl text-center">
+          <div className="md:col-span-4 glass-card-light rounded-2xl p-6 shadow-xl text-center">
             <div className="w-20 h-20 rounded-full bg-[#8F1725] text-[#E6B83F] mx-auto flex items-center justify-center text-2xl font-serif font-bold shadow-md mb-4 border-2 border-[#E6B83F]">
               {profile.name.charAt(0)}
             </div>
@@ -50,7 +50,7 @@ export function AccountClient() {
             <div className="mt-6 pt-6 border-t border-[#DED2BE] space-y-2 text-left text-xs">
               <Link
                 href="/cart"
-                className="flex items-center justify-between p-2.5 rounded-xs hover:bg-[#F7F2E8] text-[#292522] transition-colors"
+                className="flex items-center justify-between p-2.5 rounded-2xl hover:bg-[#F7F2E8] text-[#292522] transition-colors"
               >
                 <span className="flex items-center gap-2">
                   <ShoppingBag className="w-4 h-4 text-[#8F1725]" />
@@ -60,7 +60,7 @@ export function AccountClient() {
               </Link>
               <Link
                 href="/menu"
-                className="flex items-center justify-between p-2.5 rounded-xs hover:bg-[#F7F2E8] text-[#292522] transition-colors"
+                className="flex items-center justify-between p-2.5 rounded-2xl hover:bg-[#F7F2E8] text-[#292522] transition-colors"
               >
                 <span className="flex items-center gap-2">
                   <Heart className="w-4 h-4 text-[#8F1725]" />
@@ -72,7 +72,7 @@ export function AccountClient() {
           </div>
 
           {/* Right Profile Details / Settings (8 cols) */}
-          <div className="md:col-span-8 glass-card-light rounded-xs p-6 sm:p-8 shadow-xl">
+          <div className="md:col-span-8 glass-card-light rounded-2xl p-6 sm:p-8 shadow-xl">
             <div className="flex items-center justify-between pb-4 border-b border-[#DED2BE] mb-6">
               <div>
                 <h4 className="font-serif text-2xl text-[#292522]">
@@ -86,7 +86,7 @@ export function AccountClient() {
               {!isEditing && (
                 <button
                   onClick={() => setIsEditing(true)}
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#8F1725] text-[#F7F2E8] text-xs uppercase tracking-wider font-semibold rounded-xs shadow-xs hover:bg-[#70111C] transition-colors cursor-pointer"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#8F1725] text-[#F7F2E8] text-xs uppercase tracking-wider font-semibold rounded-2xl shadow-xs hover:bg-[#70111C] transition-colors cursor-pointer"
                 >
                   <Edit3 className="w-3.5 h-3.5 text-[#E6B83F]" />
                   <span>Edit Profile</span>
@@ -95,7 +95,7 @@ export function AccountClient() {
             </div>
 
             {savedSuccess && (
-              <div className="p-3 mb-6 bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs rounded-xs flex items-center gap-2">
+              <div className="p-3 mb-6 bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs rounded-2xl flex items-center gap-2">
                 <Check className="w-4 h-4 text-emerald-600" />
                 <span>Profile details saved successfully!</span>
               </div>
@@ -111,7 +111,7 @@ export function AccountClient() {
                     type="text"
                     value={profile.name}
                     onChange={(e) => setProfile({ ...profile, name: e.target.value })}
-                    className="w-full bg-[#F7F2E8] border border-[#DED2BE] focus:border-[#8F1725] rounded-xs px-4 py-2.5 text-sm text-[#292522] focus:outline-none"
+                    className="w-full bg-[#F7F2E8] border border-[#DED2BE] focus:border-[#8F1725] rounded-2xl px-4 py-2.5 text-sm text-[#292522] focus:outline-none"
                     required
                   />
                 </div>
@@ -125,7 +125,7 @@ export function AccountClient() {
                       type="tel"
                       value={profile.phone}
                       onChange={(e) => setProfile({ ...profile, phone: e.target.value })}
-                      className="w-full bg-[#F7F2E8] border border-[#DED2BE] focus:border-[#8F1725] rounded-xs px-4 py-2.5 text-sm text-[#292522] focus:outline-none"
+                      className="w-full bg-[#F7F2E8] border border-[#DED2BE] focus:border-[#8F1725] rounded-2xl px-4 py-2.5 text-sm text-[#292522] focus:outline-none"
                       required
                     />
                   </div>
@@ -138,7 +138,7 @@ export function AccountClient() {
                       type="email"
                       value={profile.email}
                       onChange={(e) => setProfile({ ...profile, email: e.target.value })}
-                      className="w-full bg-[#F7F2E8] border border-[#DED2BE] focus:border-[#8F1725] rounded-xs px-4 py-2.5 text-sm text-[#292522] focus:outline-none"
+                      className="w-full bg-[#F7F2E8] border border-[#DED2BE] focus:border-[#8F1725] rounded-2xl px-4 py-2.5 text-sm text-[#292522] focus:outline-none"
                     />
                   </div>
                 </div>
@@ -151,7 +151,7 @@ export function AccountClient() {
                     rows={2}
                     value={profile.address}
                     onChange={(e) => setProfile({ ...profile, address: e.target.value })}
-                    className="w-full bg-[#F7F2E8] border border-[#DED2BE] focus:border-[#8F1725] rounded-xs px-4 py-2.5 text-sm text-[#292522] focus:outline-none"
+                    className="w-full bg-[#F7F2E8] border border-[#DED2BE] focus:border-[#8F1725] rounded-2xl px-4 py-2.5 text-sm text-[#292522] focus:outline-none"
                   />
                 </div>
 
@@ -163,7 +163,7 @@ export function AccountClient() {
                     type="text"
                     value={profile.favoriteDish}
                     onChange={(e) => setProfile({ ...profile, favoriteDish: e.target.value })}
-                    className="w-full bg-[#F7F2E8] border border-[#DED2BE] focus:border-[#8F1725] rounded-xs px-4 py-2.5 text-sm text-[#292522] focus:outline-none"
+                    className="w-full bg-[#F7F2E8] border border-[#DED2BE] focus:border-[#8F1725] rounded-2xl px-4 py-2.5 text-sm text-[#292522] focus:outline-none"
                   />
                 </div>
 
@@ -225,14 +225,14 @@ export function AccountClient() {
               </div>
             )}
 
-            <div className="mt-8 p-4 bg-[#70111C] text-[#F7F2E8] rounded-xs border-l-4 border-[#E6B83F] flex items-start gap-3">
+            <div className="mt-8 p-4 bg-[#70111C] text-[#F7F2E8] rounded-2xl border-l-4 border-[#E6B83F] flex items-start gap-3">
               <ShieldCheck className="w-5 h-5 text-[#E6B83F] shrink-0 mt-0.5" />
               <div>
                 <span className="text-xs font-bold text-[#E6B83F] uppercase tracking-wider block">
                   Quick WhatsApp Re-Ordering
                 </span>
                 <p className="text-[11px] text-[#F7F2E8]/85 leading-relaxed mt-0.5">
-                  Whenever you build your cart, your order is dispatched immediately to our dedicated order line <strong>+92 305 4449151</strong> with live kitchen acknowledgement.
+                  Whenever you build your cart, your order is dispatched immediately to our dedicated order line <strong>+92 333 037 1414</strong> with live kitchen acknowledgement.
                 </p>
               </div>
             </div>

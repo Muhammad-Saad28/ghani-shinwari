@@ -39,10 +39,10 @@ export function Navbar() {
           className={cn(
             "max-w-7xl mx-auto rounded-full transition-all duration-500 pointer-events-auto",
             isScrolled
-              ? "bg-[#1C110A]/95 backdrop-blur-2xl border border-[#C59825]/45 shadow-[0_16px_40px_rgba(20,10,5,0.65)] py-2 sm:py-2.5 px-4 sm:px-6"
+              ? "bg-[#100905]/98 backdrop-blur-2xl border border-[#C59825]/45 shadow-[0_18px_45px_rgba(10,5,2,0.85)] py-2 sm:py-2.5 px-4 sm:px-6"
               : isHomePage
-              ? "bg-[#2A1810]/75 backdrop-blur-xl border border-[#C59825]/30 shadow-[0_12px_36px_rgba(20,10,5,0.5)] py-2.5 sm:py-3.5 px-4 sm:px-7"
-              : "bg-[#23120B]/95 backdrop-blur-2xl border border-[#C59825]/35 shadow-[0_16px_40px_rgba(20,10,5,0.6)] py-2.5 sm:py-3 px-4 sm:px-6"
+              ? "bg-[#140C07]/85 backdrop-blur-xl border border-[#C59825]/30 shadow-[0_14px_40px_rgba(10,5,2,0.7)] py-2.5 sm:py-3.5 px-4 sm:px-7"
+              : "bg-[#100905]/98 backdrop-blur-2xl border border-[#C59825]/40 shadow-[0_18px_45px_rgba(10,5,2,0.85)] py-2.5 sm:py-3 px-4 sm:px-6"
           )}
         >
           <div className="flex items-center justify-between">
@@ -193,7 +193,7 @@ export function Navbar() {
       {/* Mobile Drawer */}
       <div
         className={cn(
-          "fixed inset-0 z-40 bg-[#1C110A]/98 backdrop-blur-3xl text-[#F7F2E8] lg:hidden transition-all duration-300 flex flex-col justify-between pt-28 pb-8 px-6",
+          "fixed inset-0 z-40 bg-[#0E0704]/98 backdrop-blur-3xl text-[#F7F2E8] lg:hidden transition-all duration-300 flex flex-col justify-between pt-28 pb-8 px-6",
           mobileMenuOpen
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
@@ -231,10 +231,10 @@ export function Navbar() {
           <div className="flex items-center justify-between text-xs text-[#F7F2E8]/70 pt-2">
             <span>Daily Open: 12 PM – 3 AM</span>
             <a
-              href="tel:+923054449151"
+              href="tel:+923330371414"
               className="text-[#E6B83F] font-semibold hover:underline"
             >
-              +92 305 4449151
+              +92 333 037 1414
             </a>
           </div>
         </div>

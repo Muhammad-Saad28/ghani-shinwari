@@ -35,7 +35,7 @@ export function LocationSection() {
   ];
 
   return (
-    <section id="contact" className="py-28 md:py-36 bg-[#F7F2E8] text-[#292522] relative overflow-hidden">
+    <section id="contact" className="pt-8 pb-20 md:pt-12 md:pb-28 bg-[#F7F2E8] text-[#292522] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading
           eyebrow="Visit & Connect"
@@ -48,23 +48,23 @@ export function LocationSection() {
           {branches.map((b, idx) => (
             <ScrollFade key={idx} delay={0.1 * idx} distance={20}>
               <div
-                className="p-6 rounded-2xl glass-card-light hover:border-[#8F1725] transition-all card-hover-lift flex flex-col justify-between shadow-lg hover:shadow-2xl h-full"
+                className="p-6 rounded-2xl bg-[#1C110A] text-[#F7F2E8] border border-[#E6B83F]/35 hover:border-[#E6B83F] transition-all card-hover-lift flex flex-col justify-between shadow-xl hover:shadow-2xl h-full"
               >
                 <div>
-                  <span className="text-[10px] uppercase tracking-wider text-[#8F1725] font-bold block mb-1">
+                  <span className="text-[10px] uppercase tracking-wider text-[#E6B83F] font-bold block mb-1">
                     {b.tag}
                   </span>
-                  <h4 className="font-serif text-xl text-[#292522] font-semibold mb-2">
+                  <h4 className="font-serif text-xl text-[#F7F2E8] font-bold mb-2">
                     {b.name}
                   </h4>
-                  <p className="text-xs text-[#5C554F] leading-relaxed mb-4">
+                  <p className="text-xs text-[#EAE2D2] font-normal leading-relaxed mb-4">
                     {b.address}
                   </p>
                 </div>
 
-                <div className="pt-3 border-t border-[#DED2BE] flex items-center justify-between text-[11px] text-[#5C554F]">
-                  <span className="flex items-center gap-1">
-                    <Clock className="w-3.5 h-3.5 text-[#8F1725]" />
+                <div className="pt-3 border-t border-white/10 flex items-center justify-between text-[11px] text-[#EAE2D2]">
+                  <span className="flex items-center gap-1 font-semibold text-[#E6B83F]">
+                    <Clock className="w-3.5 h-3.5 text-[#E6B83F]" />
                     {b.timings}
                   </span>
                 </div>
@@ -77,54 +77,54 @@ export function LocationSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           
           {/* Left Direct Booking & Inquiries (7 cols) */}
-          <div className="lg:col-span-7 p-8 sm:p-12 glass-card-light rounded-2xl shadow-xl flex flex-col justify-between">
+          <div className="lg:col-span-7 p-8 sm:p-12 bg-[#1C110A] text-[#F7F2E8] border border-[#E6B83F]/35 rounded-2xl shadow-2xl flex flex-col justify-between">
             <div>
-              <span className="text-xs uppercase tracking-[0.25em] text-[#8F1725] font-bold block mb-2">
+              <span className="text-xs uppercase tracking-[0.25em] text-[#E6B83F] font-bold block mb-2">
                 Lahore Culinary Headquarters
               </span>
-              <h3 className="font-serif text-3xl sm:text-4xl text-[#292522] mb-6">
+              <h3 className="font-serif text-3xl sm:text-4xl text-[#F7F2E8] font-bold mb-6">
                 Ghani Shinwari Traditional Restaurant
               </h3>
 
-              <div className="space-y-6 text-sm text-[#292522]">
+              <div className="space-y-6 text-sm text-[#F7F2E8]">
                 <div className="flex items-start gap-4">
-                  <div className="p-3.5 rounded-xl bg-[#23120B] text-[#F7F2E8] shrink-0 mt-0.5 shadow-md border border-[#E6B83F]/30">
+                  <div className="p-3.5 rounded-xl bg-[#2A1810] text-[#F7F2E8] shrink-0 mt-0.5 shadow-md border border-[#E6B83F]/30">
                     <MapPin className="w-5 h-5 text-[#E6B83F]" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-[#8F1725] text-xs uppercase tracking-wider mb-0.5">
+                    <h4 className="font-semibold text-[#E6B83F] text-xs uppercase tracking-wider mb-0.5">
                       Main Flagship Address
                     </h4>
-                    <p className="text-[#5C554F] leading-relaxed font-medium">
+                    <p className="text-[#EAE2D2] leading-relaxed font-normal">
                       General Truck Stand, 22/A Ravi Rd, Qila Lachman Singh, Lahore
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="p-3.5 rounded-xl bg-[#23120B] text-[#F7F2E8] shrink-0 mt-0.5 shadow-md border border-[#E6B83F]/30">
+                  <div className="p-3.5 rounded-xl bg-[#2A1810] text-[#F7F2E8] shrink-0 mt-0.5 shadow-md border border-[#E6B83F]/30">
                     <Clock className="w-5 h-5 text-[#E6B83F]" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-[#8F1725] text-xs uppercase tracking-wider mb-0.5">
+                    <h4 className="font-semibold text-[#E6B83F] text-xs uppercase tracking-wider mb-0.5">
                       Daily Dining Hours
                     </h4>
-                    <p className="text-[#5C554F]">
+                    <p className="text-[#EAE2D2] font-normal">
                       Open daily from 12:00 PM until 3:00 AM midnight.
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="p-3.5 rounded-xl bg-[#23120B] text-[#F7F2E8] shrink-0 mt-0.5 shadow-md border border-[#E6B83F]/30">
+                  <div className="p-3.5 rounded-xl bg-[#2A1810] text-[#F7F2E8] shrink-0 mt-0.5 shadow-md border border-[#E6B83F]/30">
                     <MessageCircle className="w-5 h-5 text-[#E6B83F]" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-[#8F1725] text-xs uppercase tracking-wider mb-0.5">
+                    <h4 className="font-semibold text-[#E6B83F] text-xs uppercase tracking-wider mb-0.5">
                       Direct WhatsApp Helpline
                     </h4>
-                    <p className="text-[#5C554F] font-bold">
-                      +92 305 4449151
+                    <p className="text-[#F7F2E8] font-bold text-base">
+                      +92 333 037 1414
                     </p>
                   </div>
                 </div>
@@ -147,55 +147,55 @@ export function LocationSection() {
                 isExternal
                 variant="outline"
                 size="md"
-                className="w-full sm:w-auto"
+                className="w-full sm:w-auto border-[#E6B83F]/40 text-[#F7F2E8] hover:bg-[#2A1810] hover:text-[#E6B83F] hover:border-[#E6B83F]"
               >
-                <InstagramIcon className="w-4 h-4 mr-2" />
-                <span>Instagram @ghani_shinwari</span>
+                <InstagramIcon className="w-4 h-4 mr-2 text-[#E6B83F]" />
+                <span className="text-[#F7F2E8]">Instagram @ghani_shinwari</span>
               </Button>
             </div>
           </div>
 
-          {/* Right WhatsApp Dispatch Card (5 cols) */}
-          <div className="lg:col-span-5 p-8 sm:p-10 glass-panel-dark text-[#F7F2E8] rounded-xs shadow-2xl border-t-4 border-[#E6B83F] flex flex-col justify-between relative overflow-hidden">
+          {/* Right WhatsApp Dispatch Card (5 cols) with dark brown bg and cream text */}
+          <div className="lg:col-span-5 p-8 sm:p-10 bg-[#1C110A] text-[#F7F2E8] border border-[#E6B83F]/35 rounded-2xl shadow-2xl border-t-4 border-t-[#E6B83F] flex flex-col justify-between relative overflow-hidden">
             <div className="relative z-10">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#70111C] border border-[#E6B83F]/30 text-xs text-[#E6B83F] font-bold mb-4">
-                <ShieldCheck className="w-3.5 h-3.5" />
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#2A1810] border border-[#E6B83F]/35 text-xs text-[#E6B83F] font-bold mb-4 shadow-sm">
+                <ShieldCheck className="w-3.5 h-3.5 text-[#E6B83F]" />
                 <span>Direct Kitchen Dispatch</span>
               </div>
 
-              <h3 className="font-serif text-3xl text-[#F7F2E8] mb-4">
+              <h3 className="font-serif text-3xl text-[#F7F2E8] font-bold mb-4">
                 Family Tables & Fast Delivery
               </h3>
 
-              <p className="text-xs sm:text-sm text-[#F7F2E8]/85 leading-relaxed mb-6 font-light">
+              <p className="text-xs sm:text-sm text-[#EAE2D2] leading-relaxed mb-6 font-normal">
                 Planning a large family gathering or craving hot mutton karahi at your doorstep? Our dedicated dispatch line connects you straight to kitchen supervisors.
               </p>
 
-              <div className="p-4 rounded-xs bg-[#70111C] border border-[#E6B83F]/30 mb-8 space-y-2">
+              <div className="p-4 rounded-2xl bg-[#2A1810] border border-[#E6B83F]/30 mb-8 space-y-2.5">
                 <div className="flex justify-between text-xs">
-                  <span className="text-[#F7F2E8]/70">Average Prep Time:</span>
+                  <span className="text-[#EAE2D2]/80">Average Prep Time:</span>
                   <span className="font-bold text-[#E6B83F]">30–45 Mins</span>
                 </div>
                 <div className="flex justify-between text-xs">
-                  <span className="text-[#F7F2E8]/70">Meat Selection:</span>
+                  <span className="text-[#EAE2D2]/80">Meat Selection:</span>
                   <span className="font-bold text-[#E6B83F]">Live Cut-to-Order</span>
                 </div>
                 <div className="flex justify-between text-xs">
-                  <span className="text-[#F7F2E8]/70">WhatsApp Support:</span>
-                  <span className="font-bold text-white">+92 305 4449151</span>
+                  <span className="text-[#EAE2D2]/80">WhatsApp Support:</span>
+                  <span className="font-bold text-[#F7F2E8]">+92 333 037 1414</span>
                 </div>
               </div>
             </div>
 
             <div className="relative z-10">
               <a
-                href="https://wa.me/923054449151"
+                href="https://wa.me/923330371414"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center gap-2 py-4 px-6 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-widest rounded-xs shadow-xl transition-all active:translate-y-0.5"
+                className="w-full inline-flex items-center justify-center gap-2 py-4 px-6 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-widest rounded-xl shadow-xl transition-all active:translate-y-0.5"
               >
                 <MessageCircle className="w-4 h-4 fill-white" />
-                <span>Chat on WhatsApp (+92 305 4449151)</span>
+                <span>Chat on WhatsApp (+92 333 037 1414)</span>
               </a>
             </div>
           </div>

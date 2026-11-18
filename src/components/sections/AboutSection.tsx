@@ -64,18 +64,18 @@ export function AboutSection() {
               </p>
             </ScrollFade>
 
-            {/* 2x2 Craft Feature Grid with dark chocolate glass styling */}
+            {/* 2x2 Craft Feature Grid with dark brown cards and cream typography */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full mb-10">
               {craftFeatures.map((feat, idx) => (
                 <ScrollFade key={idx} delay={0.15 * idx} distance={24}>
-                  <div className="p-5 rounded-2xl glass-panel-dark border border-[#E6B83F]/25 hover:border-[#E6B83F] transition-all card-hover-lift shadow-xl h-full">
-                    <div className="w-10 h-10 rounded-xl bg-[#23120B] border border-[#E6B83F]/40 flex items-center justify-center mb-3.5 shadow-md">
+                  <div className="p-5 rounded-2xl bg-[#1C110A] border border-[#E6B83F]/35 hover:border-[#E6B83F] transition-all card-hover-lift shadow-xl h-full">
+                    <div className="w-10 h-10 rounded-xl bg-[#2A1810] border border-[#E6B83F]/40 flex items-center justify-center mb-3.5 shadow-md">
                       {feat.icon}
                     </div>
-                    <h4 className="font-serif text-base text-[#F7F2E8] font-semibold mb-1">
+                    <h4 className="font-serif text-base text-[#F7F2E8] font-bold mb-1">
                       {feat.title}
                     </h4>
-                    <p className="text-xs text-[#F7F2E8]/75 leading-relaxed font-light">
+                    <p className="text-xs text-[#EAE2D2] leading-relaxed font-normal">
                       {feat.desc}
                     </p>
                   </div>

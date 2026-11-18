@@ -20,7 +20,7 @@ import {
 
 export function BrandHero() {
   return (
-    <section className="relative min-h-[92vh] lg:min-h-screen flex items-center justify-center overflow-hidden bg-[#140608] text-[#F7F2E8] pt-24 pb-16 lg:py-24">
+    <section className="relative min-h-[92vh] lg:min-h-screen flex items-center justify-center overflow-hidden bg-[#140608] text-[#F7F2E8] pt-36 pb-16 sm:pt-40 lg:pt-44 lg:pb-24">
       {/* 1. Authentic Hearth Atmosphere Background with Rich Gradients & Overlays */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -66,10 +66,10 @@ export function BrandHero() {
 
             {/* Urdu Heritage Name */}
             <div className="flex items-center gap-3 mb-5">
-              <span className="text-xl sm:text-2xl font-serif text-[#E6B83F]/90 font-medium tracking-wide">
+              <span className="text-2xl sm:text-3xl font-urdu text-[#E6B83F] font-bold tracking-normal drop-shadow-md" dir="rtl">
                 غنی شنواری روایتی دسترخوان
               </span>
-              <span className="h-4 w-px bg-[#E6B83F]/30" />
+              <span className="h-5 w-px bg-[#E6B83F]/30" />
               <span className="text-xs uppercase tracking-widest text-[#DED2BE]/80">
                 Lahore Flagship
               </span>
@@ -93,7 +93,7 @@ export function BrandHero() {
               </Button>
 
               <Button
-                href={`https://wa.me/923054449151?text=${encodeURIComponent("Salam Ghani Shinwari, I would like to reserve a table / place an order.")}`}
+                href={`https://wa.me/923330371414?text=${encodeURIComponent("Salam Ghani Shinwari, I would like to reserve a table / place an order.")}`}
                 isExternal
                 variant="outline"
                 size="lg"
@@ -144,6 +144,7 @@ export function BrandHero() {
                   alt="Authentic Ghani Shinwari Mutton Karahi cooked in lamb fat"
                   fill
                   priority
+                  loading="eager"
                   sizes="(max-width: 768px) 300px, 450px"
                   className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
                 />

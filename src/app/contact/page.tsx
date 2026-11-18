@@ -13,7 +13,7 @@ export default function ContactPage() {
   const stats = [
     { label: "Lahore Branches", value: "04 Locations" },
     { label: "Opening Hours", value: "12 PM – 3 AM" },
-    { label: "Direct WhatsApp", value: "+92 305 4449151" },
+    { label: "Direct WhatsApp", value: "+92 333 037 1414" },
     { label: "Dine-In", value: "Family Dastarkhwan" },
   ];
 
@@ -27,9 +27,9 @@ export default function ContactPage() {
         stats={stats}
       />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-20">
         <LocationSection />
-        <div className="mt-20">
+        <div className="mt-16">
           <InstagramSection />
         </div>
       </div>

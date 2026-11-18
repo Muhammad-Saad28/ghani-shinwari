@@ -11,13 +11,13 @@ export const RESTAURANT_CONFIG = {
     instagram: "https://www.instagram.com/ghani_shinwari/",
     instagramHandle: "@ghani_shinwari",
     facebook: "https://facebook.com/ghanishinwari",
-    orderWhatsApp: "+923054449151",
-    orderWhatsAppDisplay: "+92 305 4449151",
+    orderWhatsApp: "+923330371414",
+    orderWhatsAppDisplay: "+92 333 037 1414",
   },
   placeholders: {
     address: "General Truck Stand, 22/A Ravi Rd, Qila Lachman Singh, Lahore",
     locationNote: "Flagship at General Truck Stand Ravi Road, Lahore.",
-    phone: "+92 305 4449151",
+    phone: "+92 333 037 1414",
     openingHours: "Open Daily: 12:00 PM – 3:00 AM Midnight",
   },
   navLinks: [

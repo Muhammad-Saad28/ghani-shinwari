@@ -9,7 +9,7 @@ import { Sparkles, ArrowRight, Flame } from "lucide-react";
 
 export function SignatureDishes() {
   return (
-    <section id="signatures" className="py-24 md:py-32 bg-[#FAF6EF] text-[#292522] border-b border-[#DED2BE] relative overflow-hidden">
+    <section id="signatures" className="pt-8 pb-20 md:pt-12 md:pb-28 bg-[#FAF6EF] text-[#292522] border-b border-[#DED2BE] relative overflow-hidden">
       {/* Subtle background ambient blur */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#8F1725]/5 rounded-full blur-[140px] pointer-events-none" />
 
@@ -32,11 +32,11 @@ export function SignatureDishes() {
                 className={isLarge ? "md:col-span-2 lg:col-span-2" : "md:col-span-1 lg:col-span-1"}
               >
                 <div
-                  className="group flex flex-col glass-card-light hover:border-[#8F1725] transition-all duration-500 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 card-hover-lift h-full"
+                  className="group flex flex-col bg-[#1C110A] text-[#F7F2E8] border border-[#E6B83F]/35 hover:border-[#E6B83F] transition-all duration-500 rounded-2xl overflow-hidden shadow-2xl hover:-translate-y-2 card-hover-lift h-full"
                 >
                   {/* Image Section with Zoom Effect */}
                   <div
-                    className={`relative w-full overflow-hidden bg-[#FAF6EF] rounded-t-2xl ${
+                    className={`relative w-full overflow-hidden bg-[#140C07] rounded-t-2xl ${
                       isLarge ? "aspect-[16/9] sm:aspect-[21/9]" : "aspect-[4/3]"
                     }`}
                   >
@@ -64,27 +64,27 @@ export function SignatureDishes() {
                   </div>
 
                   {/* Details Section */}
-                  <div className="p-6 flex-1 flex flex-col justify-between">
+                  <div className="p-6 flex-1 flex flex-col justify-between bg-[#1C110A]">
                     <div>
-                      <span className="text-xs uppercase tracking-wider text-[#8F1725] font-semibold flex items-center gap-1.5 mb-1.5">
+                      <span className="text-xs uppercase tracking-wider text-[#E6B83F] font-semibold flex items-center gap-1.5 mb-1.5">
                         <Flame className="w-3.5 h-3.5 text-[#E6B83F]" />
                         <span>{dish.category}</span>
                       </span>
-                      <h3 className="font-serif text-2xl text-[#292522] font-normal group-hover:text-[#8F1725] transition-colors leading-snug mb-2.5">
+                      <h3 className="font-serif text-2xl text-[#F7F2E8] font-bold group-hover:text-[#E6B83F] transition-colors leading-snug mb-2.5">
                         {dish.name}
                       </h3>
-                      <p className="text-xs sm:text-sm text-[#5C554F] leading-relaxed mb-6 font-normal">
+                      <p className="text-xs sm:text-sm text-[#EAE2D2] leading-relaxed mb-6 font-normal">
                         {dish.description}
                       </p>
                     </div>
 
-                    <div className="pt-4 border-t border-[#DED2BE] flex items-center justify-between">
-                      <span className="text-xs font-bold text-[#8F1725]">
+                    <div className="pt-4 border-t border-white/10 flex items-center justify-between">
+                      <span className="text-xs font-bold text-[#E6B83F]">
                         {dish.priceInfo}
                       </span>
                       <Link
                         href="/menu"
-                        className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl glass-btn-crimson text-white text-xs uppercase tracking-wider font-bold shadow-md hover:shadow-lg transition-all active:translate-y-0.5"
+                        className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#8F1725] hover:bg-[#A52030] text-white text-xs uppercase tracking-wider font-bold shadow-md hover:shadow-lg transition-all active:translate-y-0.5"
                       >
                         <span className="text-white">Order on Menu</span>
                         <ArrowRight className="w-3.5 h-3.5 text-[#E6B83F]" />

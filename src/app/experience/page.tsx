@@ -41,7 +41,7 @@ export default function ExperiencePage() {
 
         {/* Invitation Callout */}
         <ScrollFade distance={24}>
-          <div className="p-8 sm:p-14 bg-[#8F1725] text-[#F7F2E8] rounded-xs border border-[#E6B83F]/30 relative overflow-hidden shadow-2xl text-center">
+          <div className="p-8 sm:p-14 bg-[#8F1725] text-[#F7F2E8] rounded-2xl border border-[#E6B83F]/30 relative overflow-hidden shadow-2xl text-center">
             <div className="absolute inset-0 bg-gradient-to-r from-[#70111C] via-[#8F1725] to-[#47080F] pointer-events-none" />
             <div className="relative z-10 max-w-2xl mx-auto">
               <span className="text-xs uppercase tracking-[0.25em] text-[#E6B83F] font-bold block mb-3">

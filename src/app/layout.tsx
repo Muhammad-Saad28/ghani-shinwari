@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Plus_Jakarta_Sans, Noto_Nastaliq_Urdu } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -12,6 +12,13 @@ const fontSans = Plus_Jakarta_Sans({
   variable: "--font-sans",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700", "800"],
+  display: "swap",
+});
+
+const fontUrdu = Noto_Nastaliq_Urdu({
+  variable: "--font-urdu",
+  subsets: ["arabic"],
+  weight: ["400", "700"],
   display: "swap",
 });
 
@@ -103,13 +110,13 @@ export default function RootLayout({
       addressRegion: "Punjab",
       addressCountry: "PK",
     },
-    telephone: "+92 305 4449151",
+    telephone: "+92 333 037 1414",
   };
 
   return (
     <html
       lang="en"
-      className={`${fontSans.variable} scroll-smooth antialiased`}
+      className={`${fontSans.variable} ${fontUrdu.variable} scroll-smooth antialiased`}
     >
       <head>
         <script

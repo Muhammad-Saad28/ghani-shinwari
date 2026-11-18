@@ -128,7 +128,7 @@ export function MenuSection({
           <div className="flex items-center justify-start sm:justify-center overflow-x-auto pb-4 mb-12 gap-2 no-scrollbar">
             <button
               onClick={() => setActiveCategory("all")}
-              className={`px-4 sm:px-5 py-2.5 rounded-xs text-xs uppercase tracking-widest font-semibold transition-all cursor-pointer whitespace-nowrap ${
+              className={`px-4 sm:px-5 py-2.5 rounded-2xl text-xs uppercase tracking-widest font-semibold transition-all cursor-pointer whitespace-nowrap ${
                 activeCategory === "all"
                   ? "bg-[#E6B83F] text-[#211C16] shadow-md border border-[#E6B83F]"
                   : "bg-[#70111C] text-[#F7F2E8] hover:text-[#E6B83F] border border-[#E6B83F]/30"
@@ -143,7 +143,7 @@ export function MenuSection({
                 <button
                   key={cat.id}
                   onClick={() => setActiveCategory(cat.id)}
-                  className={`px-4 sm:px-5 py-2.5 rounded-xs text-xs uppercase tracking-widest font-semibold transition-all cursor-pointer whitespace-nowrap ${
+                  className={`px-4 sm:px-5 py-2.5 rounded-2xl text-xs uppercase tracking-widest font-semibold transition-all cursor-pointer whitespace-nowrap ${
                     isActive
                       ? "bg-[#E6B83F] text-[#211C16] shadow-md border border-[#E6B83F]"
                       : "bg-[#70111C] text-[#F7F2E8] hover:text-[#E6B83F] border border-[#E6B83F]/30"
@@ -161,10 +161,10 @@ export function MenuSection({
           {displayedItems.map((item, idx) => (
             <ScrollFade key={item.id} delay={0.08 * (idx % 8)} distance={24}>
               <div
-                className="p-5 sm:p-6 rounded-2xl glass-panel-dark border border-[#E6B83F]/30 hover:border-[#E6B83F] transition-all duration-300 flex flex-col sm:flex-row gap-5 items-start shadow-xl hover:shadow-2xl card-hover-lift h-full"
+                className="p-5 sm:p-6 rounded-2xl bg-[#1C110A] border border-[#E6B83F]/35 hover:border-[#E6B83F] transition-all duration-300 flex flex-col sm:flex-row gap-5 items-start shadow-xl hover:shadow-2xl card-hover-lift h-full"
               >
                 {/* Dish Image */}
-                <div className="relative w-full sm:w-32 h-32 rounded-xl overflow-hidden shrink-0 bg-[#211C16] border border-[#E6B83F]/30">
+                <div className="relative w-full sm:w-32 h-32 rounded-xl overflow-hidden shrink-0 bg-[#2A1810] border border-[#E6B83F]/30">
                   <Image
                     src={item.image}
                     alt={item.name}
@@ -184,18 +184,18 @@ export function MenuSection({
                 <div className="flex-1 flex flex-col justify-between h-full w-full">
                   <div>
                     <div className="flex items-start justify-between gap-3 mb-1">
-                      <h3 className="font-serif text-xl text-[#F7F2E8] font-medium leading-snug">
+                      <h3 className="font-serif text-xl text-[#F7F2E8] font-bold leading-snug">
                         {item.name}
                       </h3>
                     </div>
 
-                    <p className="text-xs text-[#F7F2E8]/80 leading-relaxed mb-4">
+                    <p className="text-xs text-[#EAE2D2] leading-relaxed mb-4 font-normal">
                       {item.description}
                     </p>
                   </div>
 
-                  <div className="pt-3 border-t border-[#E6B83F]/20 flex flex-wrap items-center justify-between gap-2">
-                    <span className="flex items-center gap-1 text-[11px] uppercase tracking-wider text-[#E6B83F] font-semibold">
+                  <div className="pt-3 border-t border-white/10 flex flex-wrap items-center justify-between gap-2">
+                    <span className="flex items-center gap-1 text-[11px] uppercase tracking-wider text-[#E6B83F] font-bold">
                       <Flame className="w-3.5 h-3.5 text-[#E6B83F]" />
                       {item.category}
                     </span>
@@ -211,7 +211,7 @@ export function MenuSection({
           <div className="mt-14 text-center">
             <Link
               href="/menu"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#E6B83F] hover:bg-[#d4a530] text-[#211C16] text-sm uppercase tracking-widest font-semibold rounded-xs shadow-2xl transition-all active:translate-y-0.5"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#E6B83F] hover:bg-[#d4a530] text-[#211C16] text-sm uppercase tracking-widest font-semibold rounded-2xl shadow-2xl transition-all active:translate-y-0.5"
             >
               <span>Explore Complete 36+ Dish Menu</span>
               <ArrowRight className="w-4 h-4 text-[#211C16]" />

@@ -40,7 +40,7 @@ export function GallerySection() {
 
               <div className="absolute inset-0 p-6 flex flex-col justify-between">
                 <div className="flex justify-end opacity-0 group-hover:opacity-100 transition-opacity">
-                  <div className="p-2 rounded-xs bg-[#8F1725] text-[#F7F2E8]">
+                  <div className="p-2 rounded-2xl bg-[#8F1725] text-[#F7F2E8]">
                     <ZoomIn className="w-4 h-4 text-[#E6B83F]" />
                   </div>
                 </div>

@@ -282,6 +282,7 @@ export function Hero() {
                     sizes="(max-width: 640px) 190px, 280px"
                     className="object-cover object-center"
                     priority={isCenter}
+                    loading={isCenter ? "eager" : "lazy"}
                   />
 
                   {/* Dark Vignette Overlay */}
@@ -389,7 +390,7 @@ export function Hero() {
           </span>
           <span className="flex items-center gap-1.5 font-medium">
             <ShieldCheck className="w-4 h-4 text-[#E6B83F]" />
-            WhatsApp Orders: <span className="text-[#E6B83F] font-bold">+92 305 4449151</span>
+            WhatsApp Orders: <span className="text-[#E6B83F] font-bold">+92 333 037 1414</span>
           </span>
         </div>
 

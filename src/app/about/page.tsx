@@ -88,7 +88,7 @@ export default function AboutPage() {
 
           <div className="lg:col-span-6 relative">
             <ScrollFade delay={0.2} distance={30}>
-              <div className="relative aspect-[4/3] rounded-xs overflow-hidden border-2 border-[#E6B83F]/40 shadow-2xl bg-[#70111C]">
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border-2 border-[#E6B83F]/40 shadow-2xl bg-[#70111C]">
                 <Image
                   src="/images/dishes/m-shinwari-karahi.webp"
                   alt="Authentic Shinwari Karahi in cast-iron wok"
@@ -97,7 +97,7 @@ export default function AboutPage() {
                   className="object-cover object-center"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none" />
-                <div className="absolute bottom-4 left-4 right-4 p-4 rounded-xs glass-panel-dark border border-[#E6B83F]/30 text-white">
+                <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl glass-panel-dark border border-[#E6B83F]/30 text-white">
                   <span className="text-[10px] uppercase tracking-wider text-[#E6B83F] font-bold block">
                     Daily Fresh Cut
                   </span>
@@ -114,15 +114,15 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
           {philosophyPillars.map((p, idx) => (
             <ScrollFade key={idx} delay={0.12 * idx} distance={24}>
-              <div className="p-8 rounded-xs bg-[#FAF6EF] border border-[#DED2BE] hover:border-[#8F1725] transition-all card-hover-lift shadow-sm h-full flex flex-col justify-between">
+              <div className="p-8 rounded-2xl bg-[#1C110A] text-[#F7F2E8] border border-[#E6B83F]/35 hover:border-[#E6B83F] transition-all card-hover-lift shadow-2xl h-full flex flex-col justify-between">
                 <div>
-                  <div className="w-12 h-12 rounded-xs bg-[#8F1725] border border-[#E6B83F]/40 flex items-center justify-center mb-6 shadow-md">
+                  <div className="w-12 h-12 rounded-2xl bg-[#2A1810] border border-[#E6B83F]/40 flex items-center justify-center mb-6 shadow-md">
                     {p.icon}
                   </div>
-                  <h3 className="font-serif text-2xl text-[#292522] mb-3">
+                  <h3 className="font-serif text-2xl text-[#F7F2E8] font-bold mb-3">
                     {p.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-[#5C554F] leading-relaxed font-light">
+                  <p className="text-xs sm:text-sm text-[#EAE2D2] leading-relaxed font-normal">
                     {p.desc}
                   </p>
                 </div>

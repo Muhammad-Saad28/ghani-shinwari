@@ -29,12 +29,12 @@ export default function SignaturesPage() {
         stats={stats}
       />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16">
         <SignatureDishes />
 
         {/* Bottom Editorial Callout */}
         <ScrollFade distance={24}>
-          <div className="mt-16 p-8 sm:p-12 rounded-xs bg-[#8F1725] text-[#F7F2E8] border border-[#E6B83F]/30 relative overflow-hidden shadow-2xl">
+          <div className="mt-16 p-8 sm:p-12 rounded-2xl bg-[#8F1725] text-[#F7F2E8] border border-[#E6B83F]/30 relative overflow-hidden shadow-2xl">
             <div className="absolute inset-0 bg-gradient-to-r from-[#70111C] via-[#8F1725] to-[#47080F] pointer-events-none" />
             <div className="relative z-10 max-w-3xl mx-auto text-center">
               <span className="text-xs uppercase tracking-[0.25em] text-[#E6B83F] font-bold block mb-3">
