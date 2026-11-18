@@ -41,12 +41,12 @@ export function ExperienceSection() {
           {EXPERIENCE_POINTS.map((point, index) => (
             <ScrollFade key={index} delay={0.12 * index} distance={24}>
               <div
-                className="group p-8 rounded-xs glass-panel-dark border border-[#E6B83F]/30 hover:border-[#E6B83F] transition-all duration-500 flex flex-col justify-between card-hover-lift shadow-xl h-full"
+                className="group p-8 rounded-2xl glass-panel-dark border border-[#E6B83F]/30 hover:border-[#E6B83F] transition-all duration-500 flex flex-col justify-between card-hover-lift shadow-xl hover:shadow-2xl h-full"
               >
                 <div>
                   {/* Header Icon + Number */}
                   <div className="flex items-center justify-between mb-6">
-                    <div className="w-13 h-13 rounded-xs bg-[#70111C] border border-[#E6B83F]/40 flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:border-[#E6B83F] transition-all duration-300">
+                    <div className="w-13 h-13 rounded-xl bg-[#23120B] border border-[#E6B83F]/40 flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:border-[#E6B83F] transition-all duration-300">
                       {iconMap[point.icon]}
                     </div>
                     <span className="font-serif text-3xl font-light text-[#E6B83F]/40 group-hover:text-[#E6B83F] transition-colors">

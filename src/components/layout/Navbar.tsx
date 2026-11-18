@@ -39,10 +39,10 @@ export function Navbar() {
           className={cn(
             "max-w-7xl mx-auto rounded-full transition-all duration-500 pointer-events-auto",
             isScrolled
-              ? "bg-[#15130F]/90 backdrop-blur-2xl border border-[#E6B83F]/35 shadow-[0_12px_36px_rgba(0,0,0,0.5)] py-2 sm:py-2.5 px-4 sm:px-6"
+              ? "bg-[#1C110A]/95 backdrop-blur-2xl border border-[#C59825]/45 shadow-[0_16px_40px_rgba(20,10,5,0.65)] py-2 sm:py-2.5 px-4 sm:px-6"
               : isHomePage
-              ? "bg-[#15130F]/55 backdrop-blur-xl border border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.3)] py-2.5 sm:py-3.5 px-4 sm:px-7"
-              : "bg-[#70111C]/90 backdrop-blur-2xl border border-[#E6B83F]/30 shadow-[0_12px_36px_rgba(0,0,0,0.4)] py-2.5 sm:py-3 px-4 sm:px-6"
+              ? "bg-[#2A1810]/75 backdrop-blur-xl border border-[#C59825]/30 shadow-[0_12px_36px_rgba(20,10,5,0.5)] py-2.5 sm:py-3.5 px-4 sm:px-7"
+              : "bg-[#23120B]/95 backdrop-blur-2xl border border-[#C59825]/35 shadow-[0_16px_40px_rgba(20,10,5,0.6)] py-2.5 sm:py-3 px-4 sm:px-6"
           )}
         >
           <div className="flex items-center justify-between">
@@ -193,7 +193,7 @@ export function Navbar() {
       {/* Mobile Drawer */}
       <div
         className={cn(
-          "fixed inset-0 z-40 bg-[#15130F]/95 backdrop-blur-3xl text-[#F7F2E8] lg:hidden transition-all duration-300 flex flex-col justify-between pt-28 pb-8 px-6",
+          "fixed inset-0 z-40 bg-[#1C110A]/98 backdrop-blur-3xl text-[#F7F2E8] lg:hidden transition-all duration-300 flex flex-col justify-between pt-28 pb-8 px-6",
           mobileMenuOpen
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"

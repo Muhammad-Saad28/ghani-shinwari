@@ -86,7 +86,7 @@ export function BrandHero() {
                 href="/menu"
                 variant="gold"
                 size="lg"
-                className="w-full sm:w-auto shadow-2xl hover:scale-[1.02] active:scale-95 transition-all text-sm uppercase tracking-wider font-bold py-4 px-8"
+                className="w-full sm:w-auto shadow-2xl hover:scale-[1.02] active:scale-95 transition-all text-sm uppercase tracking-wider font-bold py-4 px-8 rounded-2xl"
               >
                 <UtensilsCrossed className="w-4 h-4 mr-2" />
                 Explore Our Menu
@@ -97,7 +97,7 @@ export function BrandHero() {
                 isExternal
                 variant="outline"
                 size="lg"
-                className="w-full sm:w-auto border-[#E6B83F]/50 text-[#F7F2E8] hover:bg-[#8F1725] hover:border-[#8F1725] transition-all text-sm uppercase tracking-wider font-semibold py-4 px-8 backdrop-blur-md"
+                className="w-full sm:w-auto border-[#E6B83F]/50 text-[#F7F2E8] hover:bg-[#8F1725] hover:border-[#8F1725] transition-all text-sm uppercase tracking-wider font-semibold py-4 px-8 backdrop-blur-md rounded-2xl"
               >
                 <PhoneCall className="w-4 h-4 mr-2 text-[#E6B83F]" />
                 WhatsApp Order & Booking
@@ -161,7 +161,7 @@ export function BrandHero() {
               </div>
 
               {/* Floating Bottom Price & Authentic Pill */}
-              <div className="absolute -bottom-4 sm:-bottom-5 left-1/2 -translate-x-1/2 px-5 py-2 rounded-xs bg-[#1A080B]/95 border border-[#E6B83F]/60 text-[#F7F2E8] shadow-2xl flex items-center gap-3 backdrop-blur-md">
+              <div className="absolute -bottom-4 sm:-bottom-5 left-1/2 -translate-x-1/2 px-5 py-2.5 rounded-2xl bg-[#1C110A]/95 border border-[#E6B83F]/60 text-[#F7F2E8] shadow-[0_16px_36px_rgba(0,0,0,0.6)] flex items-center gap-3 backdrop-blur-md">
                 <div className="flex items-center gap-1 text-[#E6B83F]">
                   <Star className="w-3.5 h-3.5 fill-[#E6B83F]" />
                   <span className="text-xs font-bold">5.0</span>

@@ -25,7 +25,7 @@ export function GallerySection() {
             <div
               key={photo.id}
               onClick={() => setActivePhoto(photo)}
-              className={`group relative overflow-hidden rounded-xs border border-[#DED2BE] bg-[#F7F2E8] cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300 min-h-[260px] sm:min-h-[300px] ${
+              className={`group relative overflow-hidden rounded-2xl border border-[#DED2BE] bg-[#F7F2E8] cursor-pointer shadow-md hover:shadow-2xl transition-all duration-300 min-h-[260px] sm:min-h-[300px] card-hover-lift ${
                 photo.span || "md:col-span-1"
               }`}
             >

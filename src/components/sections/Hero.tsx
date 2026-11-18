@@ -328,7 +328,7 @@ export function Hero() {
                             e.stopPropagation();
                             addToCart(dish.menuItem, dish.priceHalf ? "Half" : "Full", dish.priceHalf || dish.priceFull);
                           }}
-                          className="inline-flex items-center gap-1 px-3 py-1.5 glass-btn-crimson text-white rounded-xs text-[11px] font-bold cursor-pointer hover:scale-105 transition-all shadow-md"
+                          className="inline-flex items-center gap-1 px-3 py-1.5 glass-btn-crimson text-white rounded-xl text-[11px] font-bold cursor-pointer hover:scale-105 transition-all shadow-md"
                         >
                           <Plus className="w-3 h-3 text-[#E6B83F]" />
                           <span>Quick Add</span>

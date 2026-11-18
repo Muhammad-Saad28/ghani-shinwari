@@ -64,12 +64,12 @@ export function AboutSection() {
               </p>
             </ScrollFade>
 
-            {/* 2x2 Craft Feature Grid with dark glass styling */}
+            {/* 2x2 Craft Feature Grid with dark chocolate glass styling */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full mb-10">
               {craftFeatures.map((feat, idx) => (
                 <ScrollFade key={idx} delay={0.15 * idx} distance={24}>
-                  <div className="p-4 rounded-xs glass-panel-dark border border-[#E6B83F]/25 hover:border-[#E6B83F] transition-all card-hover-lift shadow-md h-full">
-                    <div className="w-9 h-9 rounded-xs bg-[#70111C] border border-[#E6B83F]/40 flex items-center justify-center mb-3 shadow-sm">
+                  <div className="p-5 rounded-2xl glass-panel-dark border border-[#E6B83F]/25 hover:border-[#E6B83F] transition-all card-hover-lift shadow-xl h-full">
+                    <div className="w-10 h-10 rounded-xl bg-[#23120B] border border-[#E6B83F]/40 flex items-center justify-center mb-3.5 shadow-md">
                       {feat.icon}
                     </div>
                     <h4 className="font-serif text-base text-[#F7F2E8] font-semibold mb-1">
@@ -101,18 +101,18 @@ export function AboutSection() {
           {/* RIGHT 6 COLS: ASYMMETRIC DUAL-IMAGE COMPOSITION */}
           <div className="lg:col-span-6 relative mt-8 lg:mt-0">
             {/* Primary Large Image */}
-            <div className="relative aspect-[4/5] sm:aspect-[4/4.5] w-full rounded-xs overflow-hidden border-2 border-[#E6B83F]/40 shadow-2xl bg-[#70111C] group">
+            <div className="relative aspect-[4/5] sm:aspect-[4/4.5] w-full rounded-3xl overflow-hidden border-2 border-[#E6B83F]/40 shadow-2xl bg-[#23120B] group card-hover-lift">
               <Image
-                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1400&q=80"
+                src="/images/dishes/c-shinwari-karahi.webp"
                 alt="Traditional Shinwari hearth and open flame cooking"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover object-center group-hover:scale-105 transition-transform duration-1000 ease-out"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none" />
 
               {/* Floating Bottom Quote */}
-              <div className="absolute bottom-6 left-6 right-6 p-5 rounded-xs glass-panel-dark text-[#F7F2E8] border border-[#E6B83F]/40 shadow-xl">
+              <div className="absolute bottom-6 left-6 right-6 p-5 rounded-2xl glass-panel-dark text-[#F7F2E8] border border-[#E6B83F]/40 shadow-2xl">
                 <span className="text-[10px] uppercase tracking-widest text-[#E6B83F] font-bold block mb-1">
                   The Principle of Simplicity
                 </span>
@@ -123,7 +123,7 @@ export function AboutSection() {
             </div>
 
             {/* Overlapping Secondary Floating Card */}
-            <div className="absolute -top-6 -left-6 w-44 sm:w-56 aspect-square rounded-xs overflow-hidden border-2 border-[#E6B83F] shadow-2xl bg-[#70111C] hidden sm:block animate-soft-float">
+            <div className="absolute -top-6 -left-6 w-44 sm:w-56 aspect-square rounded-2xl overflow-hidden border-2 border-[#E6B83F] shadow-2xl bg-[#23120B] hidden sm:block animate-soft-float">
               <Image
                 src="/images/dishes/m-namkeen-tikka.webp"
                 alt="Namkeen Tikka charcoal roasting"

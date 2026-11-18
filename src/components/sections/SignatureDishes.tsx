@@ -32,11 +32,11 @@ export function SignatureDishes() {
                 className={isLarge ? "md:col-span-2 lg:col-span-2" : "md:col-span-1 lg:col-span-1"}
               >
                 <div
-                  className="group flex flex-col glass-card-light hover:border-[#8F1725] transition-all duration-500 rounded-xs overflow-hidden shadow-md hover:shadow-2xl hover:-translate-y-1.5 h-full"
+                  className="group flex flex-col glass-card-light hover:border-[#8F1725] transition-all duration-500 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 card-hover-lift h-full"
                 >
                   {/* Image Section with Zoom Effect */}
                   <div
-                    className={`relative w-full overflow-hidden bg-[#FAF6EF] ${
+                    className={`relative w-full overflow-hidden bg-[#FAF6EF] rounded-t-2xl ${
                       isLarge ? "aspect-[16/9] sm:aspect-[21/9]" : "aspect-[4/3]"
                     }`}
                   >
@@ -50,7 +50,7 @@ export function SignatureDishes() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent pointer-events-none" />
 
                     {/* Top Badge */}
-                    <div className="absolute top-3.5 left-3.5 bg-[#8F1725] text-[#F7F2E8] px-3 py-1.5 rounded-xs flex items-center gap-1.5 shadow-lg border border-[#E6B83F]/30 backdrop-blur-xs">
+                    <div className="absolute top-3.5 left-3.5 bg-[#8F1725] text-[#F7F2E8] px-3.5 py-1.5 rounded-xl flex items-center gap-1.5 shadow-lg border border-[#E6B83F]/30 backdrop-blur-xs">
                       <Sparkles className="w-3.5 h-3.5 text-[#E6B83F]" />
                       <span className="text-[10px] uppercase tracking-wider font-bold">
                         Signature 0{index + 1}
@@ -58,7 +58,7 @@ export function SignatureDishes() {
                     </div>
 
                     {/* Price Tag with Glassmorphic styling */}
-                    <div className="absolute bottom-3.5 right-3.5 glass-panel-dark px-3 py-1 text-xs text-[#E6B83F] font-bold border border-[#E6B83F]/40 rounded-xs shadow-md">
+                    <div className="absolute bottom-3.5 right-3.5 glass-panel-dark px-3.5 py-1.5 text-xs text-[#E6B83F] font-bold border border-[#E6B83F]/40 rounded-xl shadow-md">
                       {dish.priceInfo}
                     </div>
                   </div>
@@ -84,7 +84,7 @@ export function SignatureDishes() {
                       </span>
                       <Link
                         href="/menu"
-                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xs glass-btn-crimson text-white text-xs uppercase tracking-wider font-bold shadow-md hover:shadow-lg transition-all active:translate-y-0.5"
+                        className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl glass-btn-crimson text-white text-xs uppercase tracking-wider font-bold shadow-md hover:shadow-lg transition-all active:translate-y-0.5"
                       >
                         <span className="text-white">Order on Menu</span>
                         <ArrowRight className="w-3.5 h-3.5 text-[#E6B83F]" />

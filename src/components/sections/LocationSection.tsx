@@ -48,7 +48,7 @@ export function LocationSection() {
           {branches.map((b, idx) => (
             <ScrollFade key={idx} delay={0.1 * idx} distance={20}>
               <div
-                className="p-6 rounded-xs glass-card-light hover:border-[#8F1725] transition-all card-hover-lift flex flex-col justify-between shadow-md hover:shadow-xl h-full"
+                className="p-6 rounded-2xl glass-card-light hover:border-[#8F1725] transition-all card-hover-lift flex flex-col justify-between shadow-lg hover:shadow-2xl h-full"
               >
                 <div>
                   <span className="text-[10px] uppercase tracking-wider text-[#8F1725] font-bold block mb-1">
@@ -77,7 +77,7 @@ export function LocationSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           
           {/* Left Direct Booking & Inquiries (7 cols) */}
-          <div className="lg:col-span-7 p-8 sm:p-12 glass-card-light rounded-xs shadow-lg flex flex-col justify-between">
+          <div className="lg:col-span-7 p-8 sm:p-12 glass-card-light rounded-2xl shadow-xl flex flex-col justify-between">
             <div>
               <span className="text-xs uppercase tracking-[0.25em] text-[#8F1725] font-bold block mb-2">
                 Lahore Culinary Headquarters
@@ -88,7 +88,7 @@ export function LocationSection() {
 
               <div className="space-y-6 text-sm text-[#292522]">
                 <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-xs bg-[#8F1725] text-[#F7F2E8] shrink-0 mt-0.5 shadow-sm">
+                  <div className="p-3.5 rounded-xl bg-[#23120B] text-[#F7F2E8] shrink-0 mt-0.5 shadow-md border border-[#E6B83F]/30">
                     <MapPin className="w-5 h-5 text-[#E6B83F]" />
                   </div>
                   <div>
@@ -102,7 +102,7 @@ export function LocationSection() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-xs bg-[#8F1725] text-[#F7F2E8] shrink-0 mt-0.5 shadow-sm">
+                  <div className="p-3.5 rounded-xl bg-[#23120B] text-[#F7F2E8] shrink-0 mt-0.5 shadow-md border border-[#E6B83F]/30">
                     <Clock className="w-5 h-5 text-[#E6B83F]" />
                   </div>
                   <div>
@@ -116,7 +116,7 @@ export function LocationSection() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-xs bg-[#8F1725] text-[#F7F2E8] shrink-0 mt-0.5 shadow-sm">
+                  <div className="p-3.5 rounded-xl bg-[#23120B] text-[#F7F2E8] shrink-0 mt-0.5 shadow-md border border-[#E6B83F]/30">
                     <MessageCircle className="w-5 h-5 text-[#E6B83F]" />
                   </div>
                   <div>

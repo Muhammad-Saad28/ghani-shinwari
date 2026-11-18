@@ -8,13 +8,13 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#8F1725] text-[#F7F2E8] border-t-4 border-[#E6B83F] pt-16 pb-12">
+    <footer className="bg-[#1C110A] text-[#F7F2E8] border-t-4 border-[#E6B83F] pt-16 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 pb-12 border-b border-[#F7F2E8]/20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 pb-12 border-b border-[#F7F2E8]/15">
           {/* Brand Info with Logo */}
           <div className="flex flex-col items-start space-y-4">
             <div className="flex items-center gap-3.5">
-              <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-[#E6B83F] shadow-md shrink-0 bg-[#70111C]">
+              <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-[#E6B83F] shadow-md shrink-0 bg-[#2A1810]">
                 <Image
                   src="/logo.jpg"
                   alt="Ghani Shinwari Logo"
@@ -39,7 +39,7 @@ export function Footer() {
               href={RESTAURANT_CONFIG.social.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-xs uppercase tracking-wider text-[#F7F2E8] hover:text-[#E6B83F] transition-colors p-2 rounded bg-[#70111C] border border-[#E6B83F]/30"
+              className="inline-flex items-center gap-2 text-xs uppercase tracking-wider text-[#F7F2E8] hover:text-[#E6B83F] transition-colors p-2 rounded-xl bg-[#2A1810] border border-[#E6B83F]/30"
             >
               <InstagramIcon className="w-4 h-4 text-[#E6B83F]" />
               <span>Follow {RESTAURANT_CONFIG.social.instagramHandle}</span>
@@ -92,7 +92,7 @@ export function Footer() {
           </div>
 
           {/* Authenticity Guarantee Card */}
-          <div className="bg-[#70111C] p-5 rounded-xs border border-[#E6B83F]/25 flex flex-col justify-between">
+          <div className="bg-[#2A1810] p-6 rounded-2xl border border-[#E6B83F]/35 flex flex-col justify-between shadow-xl">
             <div>
               <div className="flex items-center gap-2 text-[#E6B83F] mb-2.5">
                 <ShieldCheck className="w-5 h-5" />

@@ -38,7 +38,7 @@ export function MenuSection({
         <div className="flex items-center gap-2">
           <button
             onClick={() => addToCart(item, "Half", item.priceHalf)}
-            className="inline-flex items-center gap-1 px-2.5 py-1.5 bg-[#70111C] hover:bg-[#8F1725] text-[#F7F2E8] hover:text-[#E6B83F] border border-[#E6B83F]/40 rounded-xs text-xs font-semibold transition-all cursor-pointer shadow-xs active:translate-y-0.5"
+            className="inline-flex items-center gap-1 px-3 py-1.5 bg-[#70111C] hover:bg-[#8F1725] text-[#F7F2E8] hover:text-[#E6B83F] border border-[#E6B83F]/40 rounded-xl text-xs font-semibold transition-all cursor-pointer shadow-sm active:translate-y-0.5"
             title={`Add Half ${item.name} (PKR ${item.priceHalf.toLocaleString()})`}
           >
             <Plus className="w-3 h-3 text-[#E6B83F]" />
@@ -46,7 +46,7 @@ export function MenuSection({
           </button>
           <button
             onClick={() => addToCart(item, "Full", item.priceFull)}
-            className="inline-flex items-center gap-1 px-2.5 py-1.5 bg-[#E6B83F] hover:bg-[#d4a530] text-[#211C16] rounded-xs text-xs font-semibold transition-all cursor-pointer shadow-xs active:translate-y-0.5"
+            className="inline-flex items-center gap-1 px-3 py-1.5 bg-[#E6B83F] hover:bg-[#d4a530] text-[#211C16] rounded-xl text-xs font-semibold transition-all cursor-pointer shadow-sm active:translate-y-0.5"
             title={`Add Full ${item.name} (PKR ${item.priceFull.toLocaleString()})`}
           >
             <Plus className="w-3 h-3 text-[#211C16]" />
@@ -62,14 +62,14 @@ export function MenuSection({
         <div className="flex items-center gap-2">
           <button
             onClick={() => addToCart(item, "Small", item.priceSmall)}
-            className="inline-flex items-center gap-1 px-2.5 py-1.5 bg-[#70111C] hover:bg-[#8F1725] text-[#F7F2E8] hover:text-[#E6B83F] border border-[#E6B83F]/40 rounded-xs text-xs font-semibold transition-all cursor-pointer shadow-xs active:translate-y-0.5"
+            className="inline-flex items-center gap-1 px-3 py-1.5 bg-[#70111C] hover:bg-[#8F1725] text-[#F7F2E8] hover:text-[#E6B83F] border border-[#E6B83F]/40 rounded-xl text-xs font-semibold transition-all cursor-pointer shadow-sm active:translate-y-0.5"
           >
             <Plus className="w-3 h-3 text-[#E6B83F]" />
             <span>Sm (PKR {item.priceSmall.toLocaleString()})</span>
           </button>
           <button
             onClick={() => addToCart(item, "Large", item.priceLarge)}
-            className="inline-flex items-center gap-1 px-2.5 py-1.5 bg-[#E6B83F] hover:bg-[#d4a530] text-[#211C16] rounded-xs text-xs font-semibold transition-all cursor-pointer shadow-xs active:translate-y-0.5"
+            className="inline-flex items-center gap-1 px-3 py-1.5 bg-[#E6B83F] hover:bg-[#d4a530] text-[#211C16] rounded-xl text-xs font-semibold transition-all cursor-pointer shadow-sm active:translate-y-0.5"
           >
             <Plus className="w-3 h-3 text-[#211C16]" />
             <span>Lg (PKR {item.priceLarge.toLocaleString()})</span>
@@ -83,7 +83,7 @@ export function MenuSection({
       return (
         <button
           onClick={() => addToCart(item, "Full", item.priceFull)}
-          className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-[#E6B83F] hover:bg-[#d4a530] text-[#211C16] rounded-xs text-xs font-semibold transition-all cursor-pointer shadow-xs active:translate-y-0.5"
+          className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-[#E6B83F] hover:bg-[#d4a530] text-[#211C16] rounded-xl text-xs font-semibold transition-all cursor-pointer shadow-sm active:translate-y-0.5"
         >
           <Plus className="w-3.5 h-3.5 text-[#211C16]" />
           <span>Add • PKR {item.priceFull.toLocaleString()}</span>
@@ -96,7 +96,7 @@ export function MenuSection({
     return (
       <button
         onClick={() => addToCart(item, "Standard", resolvedPrice)}
-        className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-[#E6B83F] hover:bg-[#d4a530] text-[#211C16] rounded-xs text-xs font-semibold transition-all cursor-pointer shadow-xs active:translate-y-0.5"
+        className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-[#E6B83F] hover:bg-[#d4a530] text-[#211C16] rounded-xl text-xs font-semibold transition-all cursor-pointer shadow-sm active:translate-y-0.5"
       >
         <Plus className="w-3.5 h-3.5 text-[#211C16]" />
         <span>Add • PKR {resolvedPrice.toLocaleString()}</span>
@@ -161,10 +161,10 @@ export function MenuSection({
           {displayedItems.map((item, idx) => (
             <ScrollFade key={item.id} delay={0.08 * (idx % 8)} distance={24}>
               <div
-                className="p-5 sm:p-6 rounded-xs glass-panel-dark border border-[#E6B83F]/30 hover:border-[#E6B83F] transition-all duration-300 flex flex-col sm:flex-row gap-5 items-start shadow-xl card-hover-lift h-full"
+                className="p-5 sm:p-6 rounded-2xl glass-panel-dark border border-[#E6B83F]/30 hover:border-[#E6B83F] transition-all duration-300 flex flex-col sm:flex-row gap-5 items-start shadow-xl hover:shadow-2xl card-hover-lift h-full"
               >
                 {/* Dish Image */}
-                <div className="relative w-full sm:w-32 h-32 rounded-xs overflow-hidden shrink-0 bg-[#211C16] border border-[#E6B83F]/30">
+                <div className="relative w-full sm:w-32 h-32 rounded-xl overflow-hidden shrink-0 bg-[#211C16] border border-[#E6B83F]/30">
                   <Image
                     src={item.image}
                     alt={item.name}
@@ -173,7 +173,7 @@ export function MenuSection({
                     className="object-cover object-center hover:scale-105 transition-transform duration-500"
                   />
                   {item.isSignature && (
-                    <div className="absolute top-1.5 left-1.5 bg-[#8F1725] text-[#F7F2E8] text-[9px] uppercase tracking-wider font-bold px-1.5 py-0.5 rounded-xs flex items-center gap-1 shadow-sm border border-[#E6B83F]/40">
+                    <div className="absolute top-1.5 left-1.5 bg-[#8F1725] text-[#F7F2E8] text-[9px] uppercase tracking-wider font-bold px-2 py-0.5 rounded-lg flex items-center gap-1 shadow-sm border border-[#E6B83F]/40">
                       <Sparkles className="w-2.5 h-2.5 text-[#E6B83F]" />
                       <span>Popular</span>
                     </div>
