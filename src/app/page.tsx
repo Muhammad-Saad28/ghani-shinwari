@@ -1,3 +1,4 @@
+import { BrandHero } from "@/components/sections/BrandHero";
 import { Hero } from "@/components/sections/Hero";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { SignatureDishes } from "@/components/sections/SignatureDishes";
@@ -10,6 +11,7 @@ import { LocationSection } from "@/components/sections/LocationSection";
 export default function HomePage() {
   return (
     <>
+      <BrandHero />
       <Hero />
       <AboutSection />
       <SignatureDishes />
