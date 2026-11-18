@@ -29,14 +29,13 @@ export function BrandHero() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center scale-105 filter brightness-75 contrast-110"
+          className="object-cover object-center filter brightness-90 contrast-105"
         />
 
-        {/* Deep cinematic vignette & warm hearth glow overlays */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#140608]/95 via-[#140608]/85 to-[#140608]/70" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#140608] via-transparent to-[#140608]/80" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_50%,rgba(230,184,63,0.12),transparent_60%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_40%,rgba(143,23,37,0.35),transparent_50%)]" />
+        {/* Sophisticated editorial vignette & warm hearth lighting */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#140608]/95 via-[#140608]/75 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#140608] via-transparent to-[#140608]/70" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_40%,rgba(143,23,37,0.25),transparent_60%)]" />
       </div>
 
       {/* 2. Main Content Container */}
